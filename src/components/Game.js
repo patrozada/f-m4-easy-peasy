@@ -15,7 +15,7 @@ class Game extends React.Component {
 		this.setState({ game: this.props.game });
 	}
 	handleButtonClick = () => {
-		const apiUrl = '';
+		const apiUrl = 'url';
 		fetch(
 			`${apiUrl}?body=${this.props.value}&game_id=${
 				this.state.game.id

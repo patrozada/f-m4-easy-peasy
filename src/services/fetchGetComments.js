@@ -1,6 +1,4 @@
-import * as api from './api';
-
-const ENDPOINT = '';
+const ENDPOINT = 'url';
 
 const fetchGetComments = () => fetch(ENDPOINT).then(res => res.json());
 
