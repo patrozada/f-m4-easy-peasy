@@ -10,7 +10,7 @@ class Feedback extends React.Component {
 				parent_id: 5858,
 				pod_id: 609,
 				user_action: value,
-				game_id: 'gameid'
+				game_id: this.props.game.id
 			})
 		})
 			.then(res => res.json())
