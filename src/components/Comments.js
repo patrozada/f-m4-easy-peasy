@@ -8,7 +8,8 @@ class Comments extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				<p>Comments</p>
+				{this.props.comments.map(comment => 
+					<p>{comment.body}</p>)}
 			</React.Fragment>
 		);
 	}
