@@ -1,3 +1,8 @@
+This is a collaboration project with Easy-Peasy.
+The objective is to add a comment form and to show comments from other users in the detial section of each games and to retrieve feedback about user satisfaction.
+We are using React to develop this features.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
