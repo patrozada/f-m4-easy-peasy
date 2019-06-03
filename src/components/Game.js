@@ -5,6 +5,8 @@ import Carousel from "./Carousel"
 import Comments from "./Comments";
 import Feedback from "./Feedback";
 import MoreGames from "./MoreGames";
+import Card from 'react-bootstrap/Card'
+
 import { Link } from 'react-router-dom';
 
 
