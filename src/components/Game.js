@@ -5,7 +5,6 @@ import Carousel from "./Carousel"
 import Comments from "./Comments";
 import Feedback from "./Feedback";
 import MoreGames from "./MoreGames";
-import Card from 'react-bootstrap/Card'
 
 import { Link } from 'react-router-dom';
 
@@ -20,12 +19,12 @@ class Game extends React.Component {
 					.map(game => {
 						return <div>
             <Header />
+						<Carousel game={game}/>
 						<Link to={`/game/${game.id}/comment`}>
 							<Button 
 								gameID={game.id}
 								handleButtonClick={this.props.handleButtonClick}/>
 						</Link>
-						<Carousel game={game}/>
 						<Comments game={game} />
 						<Feedback game={game} />
 				    <MoreGames />
