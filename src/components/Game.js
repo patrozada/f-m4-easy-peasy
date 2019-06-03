@@ -26,7 +26,8 @@ class Game extends React.Component {
 						<Carousel game={game}/>
 						<Comments game={game} />
 						<Feedback game={game} />
-				    <MoreGames />
+				    <MoreGames games={games} bgc="selected-game"/>
+						<MoreGames games={games} bgc="ordinary-game"/>
 						</div>})}
 			</React.Fragment>
 		);
