@@ -9,8 +9,6 @@ import { Link } from 'react-router-dom';
 
 
 class Game extends React.Component {
-	
-
 	render() {
 		const {games} = this.props;
 		return (
@@ -21,7 +19,9 @@ class Game extends React.Component {
 						return <div>
             <Header />
 						<Link to={`/game/${game.id}/comment`}>
-							<Button />
+							<Button 
+								gameID={game.id}
+								handleButtonClick={this.props.handleButtonClick}/>
 						</Link>
 						<Carousel game={game}/>
 						<Comments game={game} />
