@@ -1,4 +1,6 @@
 import React from 'react';
+import imgPlay from '../images/play-white@1x.png';
+import imgSettings from '../images/settings-default.png';
 
 class Header extends React.Component {
 	render() {
@@ -9,9 +11,18 @@ class Header extends React.Component {
 					<nav>
 						<ul>
 							<li>
-								<a href="">Games</a> <a href="">Progress</a> 
-								<a href="">Awards</a>             
+								<a href="">Games</a> 
 							</li>
+							<li>
+								<a href="">Progress</a> 
+							</li>
+							<li>
+								<a href="">Awards</a> 
+							</li>
+							<li>
+								<img src={imgSettings} alt="image-settings" />
+							</li>
+							            
 						</ul>
 					</nav>
 				</section>
@@ -24,7 +35,7 @@ class Header extends React.Component {
 						className="header__image-game"
 						style={{ backgroundImage: `url(${game.image_url})` }}
 					/>
-					<img />
+					<img src={imgPlay} alt="image-play" />
 				</section>
 			</React.Fragment>
 		);
