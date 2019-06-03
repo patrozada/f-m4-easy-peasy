@@ -1,8 +1,12 @@
-import React from 'react';
-import Comments from './Comments';
-import Feedback from './Feedback';
-import ShareIdea from './ShareIdea';
-import { ENDPOINT } from './../services/fetchPostComments';
+import React from "react";
+import Header from "./Header";
+import Carousel from "./Carousel"
+import Comments from "./Comments";
+import Feedback from "./Feedback";
+import ShareIdea from "./ShareIdea";
+import CommentSection from "./CommentSection";
+import MoreGames from "./MoreGames";
+import { ENDPOINT } from "./../services/fetchPostComments";
 
 class Game extends React.Component {
 	handleButtonClick = () => {
@@ -25,6 +29,8 @@ class Game extends React.Component {
 	render() {
 		return (
 			<div>
+				<Header />
+				<Carousel />
 				<Comments comments={this.filterComments()} />
 				<Feedback game={this.props.game} />
 				<ShareIdea
@@ -32,6 +38,8 @@ class Game extends React.Component {
 					handleTextArea={this.props.handleTextArea}
 					handleButtonClick={this.handleButtonClick}
 				/>
+				<CommentSection />
+				<MoreGames />
 			</div>
 		);
 	}
