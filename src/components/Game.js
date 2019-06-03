@@ -1,23 +1,20 @@
-import React from 'react';
-import Comments from './Comments';
-import Feedback from './Feedback';
-import ShareIdea from './ShareIdea';
+import React from "react";
+import Comments from "./Comments";
+import Feedback from "./Feedback";
+import ShareIdea from "./ShareIdea";
+import { ENDPOINT } from "./../services/fetchPostComments";
 
 class Game extends React.Component {
-	handleButtonClick = () => {
-		const apiUrl = 'url';
-		fetch(
-			`${apiUrl}?body=${this.props.value}&game_id=${
-				this.state.game.id
-			}&parent_id=5858`,
-			{
-				method: 'POST'
-			}
-		).catch(error => console.log(error));
-	};
+  handleButtonClick = () => {;
+    fetch(
+      `${ENDPOINT}?body=${this.props.value}&game_id=${this.props.game.id}&parent_id=5858`,
+      {
+        method: "POST",
+      }
+    ).catch(error => console.log(error));
+  };
 	filterComments() {
-		console.log(this.state.game.comments);
-		const filteredComments = this.state.game.comments.filter(comment =>
+		const filteredComments = this.props.game.comments.filter(comment =>
 			comment.body ? comment.body.length > 10 : false
 		);
 		return filteredComments;
