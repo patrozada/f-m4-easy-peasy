@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from './Header';
 import Carousel from './Carousel';
@@ -14,11 +15,10 @@ class Game extends React.Component {
 			method: 'POST'
 		}).catch(error => console.log(error));
 	};
-
 	render() {
 		const { games } = this.props;
 		return (
-			<div>
+			<React.Fragment>
 				{games
 					.filter(game => game.id === 21)
 					.map(game => {
