@@ -1,9 +1,10 @@
 import React from 'react';
+import CarouselCard from './CarouselCard';
 
 class Carousel extends React.Component{
   render(){
     return(
-      <p>This is Carousel</p>
+      <CarouselCard game = {this.props.game}/>
     )
   }
 }

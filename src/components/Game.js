@@ -30,7 +30,7 @@ class Game extends React.Component {
 		return (
 			<div>
 				<Header />
-				<Carousel />
+				<Carousel game = {this.props.game}/>
 				<Comments comments={this.filterComments()} />
 				<Feedback game={this.props.game} />
 				<ShareIdea
