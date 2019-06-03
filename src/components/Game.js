@@ -22,6 +22,7 @@ class Game extends React.Component {
 						<Link to={`/game/${game.id}/comment`}>
 							<button>Share your ideas</button>
 						</Link>
+						<Carousel game={game}/>
 						<Comments game={game} />
 						<Feedback game={game} />
 				    <MoreGames />
