@@ -7,9 +7,7 @@ import { ENDPOINT } from './../services/fetchPostComments';
 class Game extends React.Component {
 	handleButtonClick = () => {
 		fetch(
-			`${ENDPOINT}?body=${this.props.value}&game_id=${
-				this.props.game.id
-			}&parent_id=6281`,
+			`${ENDPOINT}?body=${this.props.value}&game_id=${21}&parent_id=6281`,
 			{
 				method: 'POST'
 			}
