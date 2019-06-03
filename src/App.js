@@ -19,6 +19,10 @@ class App extends React.Component {
 
 		this.handleTextArea = this.handleTextArea.bind(this);
 		this.clearTextArea = this.clearTextArea.bind(this);
+		this.insertCommentInGame = this.insertCommentInGame.bind(this);
+		this.updateGamesWithNewGame = this.updateGamesWithNewGame.bind(this);
+
+
 	}
 
 	componentDidMount() {
@@ -41,22 +45,58 @@ class App extends React.Component {
 				method: 'POST'
 			}
 		).catch(error => console.log(error));
+		this.updateGamesWithNewGame();
 		this.clearTextArea();
 	};
 
 	clearTextArea() {
-		fetchGetComments().then(data => {
-			this.setState({ 
-				games: data.games,
-				value: ''
+		this.setState({ 
+				value: '',
 			});
-		});
 	}
 
+	insertCommentInGame(){
+		const comment = {
+			body: this.state.value,
+		}
+		const game = this.state.games
+		.find(game => game.id === 21)
+
+		console.log(game.comments);
+		
+
+		const newComments = [...game.comments];
+		newComments.push(comment)
+
+		console.log(newComments);
+		
+
+		const updatedGame = {...game, comments: newComments}
+		return updatedGame;
+	}
+
+	updateGamesWithNewGame(){
+		const updatedGame = this.insertCommentInGame();
+		console.log(updatedGame);
+		
+		//find index of game 21
+		const gameIndex = this.state.games.findIndex(game => game.id === 21);
+		console.log(gameIndex);
+		
+		//replace game with updated game
+		const newGames = [...this.state.games];
+		newGames[gameIndex] = updatedGame;
+		console.log(newGames);
+		
+		this.setState({ 
+				games: newGames,
+			});	
+	}
 	render() {
 		const { value, games } = this.state;
 		return (
 			<React.Fragment>
+			<button onClick={()=> console.log(this)}>info</button>
 				<Switch>
 					<Route exact path="/" render={routerProps => (
 						<Home />
