@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import Button from "./Button";
 import Carousel from "./Carousel"
 import Comments from "./Comments";
 import Feedback from "./Feedback";
@@ -20,7 +21,7 @@ class Game extends React.Component {
 						return <div>
             <Header />
 						<Link to={`/game/${game.id}/comment`}>
-							<button>Share your ideas</button>
+							<Button />
 						</Link>
 						<Comments game={game} />
 						<Feedback game={game} />
