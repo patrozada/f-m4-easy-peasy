@@ -1,0 +1,35 @@
+.feedback{
+  &--container{
+    width: 100%;
+    display: flex;
+    background-color: $green__primary-color;
+    height: 50px;
+  }
+  &--title{
+    color: $text-color__ligth;
+    text-transform: uppercase;
+    font-family: $font__general;
+    font-size: $font__general-size;
+    height: 100%;
+    width:35%;
+    margin:5px 38px;
+  }
+  &--input__container{
+    width:65%;
+    display: flex;
+
+  }
+  &--icon__container{
+    height: 45px;
+    width:45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:$background-color;
+    border-radius: 5px;
+    margin: 5px 2px;
+  }
+  &--icon{
+    height: 35px;
+  }
+}
