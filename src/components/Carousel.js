@@ -16,30 +16,16 @@ class Carousel extends React.Component {
     return (
       <Slider {...settings}>
         <div>
-          <h3>1</h3>
+          <CarouselInstructions game = {this.props.game}/>
         </div>
         <div>
-          <h3>2</h3>
+          <CarouselLevel1 game = {this.props.game}/>
         </div>
         <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
+          <CarouselLevel2 game = {this.props.game}/>
         </div>
       </Slider>
     );
   }
 }
 export default Carousel;
-      // <div>
-      //   <CarouselInstructions game = {this.props.game}/>
-      //   <CarouselLevel1 game = {this.props.game}/>
-      //   <CarouselLevel2 game = {this.props.game}/>
-      // </div>
