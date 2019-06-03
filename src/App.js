@@ -20,7 +20,7 @@ class App extends React.Component {
 			this.setState({ games: data.games });
 		});
 	}
-
+	
 	handleTextArea(event) {
 		const inputValue = event.target.value;
 		this.setState({
@@ -29,10 +29,10 @@ class App extends React.Component {
 	}
 
 	render() {
-		const { games, value } = this.state;
-		return games.map(game => (
-			<Game game={game} value={value} handleTextArea={this.handleTextArea} />
-		));
+		const { value, games } = this.state;
+		return(
+			<Game games={games} value={value} handleTextArea={this.handleTextArea} />
+		);
 	}
 }
 
