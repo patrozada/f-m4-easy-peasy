@@ -1,19 +1,20 @@
-import React from 'react';
+import React from "react";
 
 class Comments extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {};
-	}
-	render() {
-		return (
-			<React.Fragment>
-				{this.props.comments.map(comment => (
-					<p>{comment.body}</p>
-				))}
-			</React.Fragment>
-		);
-	}
+  render() {
+    const { game } = this.props;
+
+    return (
+      <div>
+		{game.comments
+		.filter(comment =>
+          comment.body ? comment.body.length > 1 : false
+        ).map(comment =>
+			<p>{comment.body}</p>
+		)}
+      </div>
+    );
+  }
 }
 
 export default Comments;

@@ -11,35 +11,33 @@ import { ENDPOINT } from "./../services/fetchPostComments";
 class Game extends React.Component {
 	handleButtonClick = () => {
 		fetch(
-			`${ENDPOINT}?body=${this.props.value}&game_id=${
-				this.props.game.id
-			}&parent_id=6281`,
+			`${ENDPOINT}?body=${this.props.value}&game_id=${21}&parent_id=6281`,
 			{
 				method: 'POST'
 			}
 		).catch(error => console.log(error));
 	};
-	filterComments() {
-		const filteredComments = this.props.game.comments.filter(comment =>
-			comment.body ? comment.body.length > 10 : false
-		);
-		return filteredComments;
-	}
 
 	render() {
+		const {games} = this.props;
 		return (
 			<div>
-				<Header />
-				<Carousel />
-				<Comments comments={this.filterComments()} />
-				<Feedback game={this.props.game} />
-				<ShareIdea
-					value={this.props.value}
-					handleTextArea={this.props.handleTextArea}
-					handleButtonClick={this.handleButtonClick}
-				/>
-				<CommentSection />
-				<MoreGames />
+				{games
+					.filter(game => game.id === 21)
+					.map(game => {
+						return <div>
+            <Header />
+				    <Carousel />
+						<Comments game={game} />
+						<Feedback game={game} />
+						<ShareIdea
+							value={this.props.value}
+							handleTextArea={this.props.handleTextArea}
+							handleButtonClick={this.handleButtonClick}
+						/>
+            <CommentSection />
+				    <MoreGames />
+						</div>})}
 			</div>
 		);
 	}
