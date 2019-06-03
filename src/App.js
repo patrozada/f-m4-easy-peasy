@@ -1,14 +1,13 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import ShareIdea from "./components/ShareIdea";
+import { fetchGetComments } from './services/fetchGetComments';
 import { ENDPOINT } from "./services/fetchPostComments";
 
-import './App.scss';
+import ShareIdea from "./components/ShareIdea";
 import Game from './components/Game';
 import Home from './components/Home';
 
-
-import { fetchGetComments } from './services/fetchGetComments';
+import './App.scss';
 
 class App extends React.Component {
 	constructor(props) {
