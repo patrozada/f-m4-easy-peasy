@@ -13,6 +13,7 @@ class App extends React.Component {
 		};
 
 		this.handleTextArea = this.handleTextArea.bind(this);
+		this.clearTextArea = this.clearTextArea.bind(this);
 	}
 
 	componentDidMount() {
@@ -28,10 +29,23 @@ class App extends React.Component {
 		});
 	}
 
+	clearTextArea() {
+		fetchGetComments().then(data => {
+			this.setState({ 
+				games: data.games,
+				value: ''
+			});
+		});
+	}
+
 	render() {
 		const { value, games } = this.state;
 		return(
-			<Game games={games} value={value} handleTextArea={this.handleTextArea} />
+			<Game 
+				games={games}
+				value={value}
+				handleTextArea={this.handleTextArea}
+				clearTextArea={this.clearTextArea} />
 		);
 	}
 }

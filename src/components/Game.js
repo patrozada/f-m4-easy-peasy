@@ -16,6 +16,7 @@ class Game extends React.Component {
 				method: 'POST'
 			}
 		).catch(error => console.log(error));
+		this.props.clearTextArea();
 	};
 
 	render() {
