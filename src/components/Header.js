@@ -1,43 +1,64 @@
 import React from 'react';
 import imgPlay from '../images/play-white@1x.png';
 import imgSettings from '../images/settings-default.png';
+import './header.scss';
 
 class Header extends React.Component {
 	render() {
 		const { game } = this.props;
 		return (
-			<React.Fragment>
+			<header>
 				<section className="header__nav">
 					<nav>
-						<ul>
+						<ul className="header__nav-list">
 							<li>
-								<a href="">Games</a> 
+								<a className="header__nav-list-link" href="#">
+									Games
+								</a>
+								 
 							</li>
 							<li>
-								<a href="">Progress</a> 
+								<a className="header__nav-list-link" href="#">
+									Progress
+								</a>
+								 
 							</li>
 							<li>
-								<a href="">Awards</a> 
+								<a className="header__nav-list-link" href="#">
+									Awards
+								</a>
+								 
 							</li>
 							<li>
-								<img src={imgSettings} alt="image-settings" />
+								<img
+									className="header__nav-settingsImage-elem"
+									src={imgSettings}
+									alt="image-settings"
+								/>
 							</li>
-							            
+							      
 						</ul>
 					</nav>
 				</section>
-				<section className="header__titles">
-					<h1>{game.name}</h1>  
-					<p>{game.description}</p> 
-				</section>
 				<section>
+					<h1 className="header__title">{game.name}</h1>  
+					<p className="header__subtitle">{game.description}</p> 
+				</section>
+				<section className="header__image-section">
 					<div
 						className="header__image-game"
 						style={{ backgroundImage: `url(${game.image_url})` }}
 					/>
-					<img src={imgPlay} alt="image-play" />
+					<div className="header__image-play-container">
+						{' '}
+						<img
+							className="header__image-play"
+							src={imgPlay}
+							alt="image-play"
+						/>
+					</div>
 				</section>
-			</React.Fragment>
+			</header>
 		);
 	}
 }

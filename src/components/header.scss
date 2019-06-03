@@ -1,0 +1,66 @@
+@import '../styles/variables';
+
+.header__nav-list {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	padding-left: 30px;
+	height: 40px;
+	align-items: center;
+	background-color: $background-color__nav-bar;
+}
+
+.header__nav-list-link {
+	text-decoration: none;
+	color: $font__color-nav-titles;
+	font-size: $font__nav-bar;
+	text-transform: uppercase;
+	margin-right: 30px;
+	font-family: $font__general;
+	font-style: bold;
+}
+
+.header__nav-settingsImage-elem {
+	margin-left: 20px;
+}
+
+.header__image-game {
+	height: 200px;
+	background-size: cover;
+}
+
+.header__title {
+	margin-top: 10px;
+	margin-left: 13px;
+	font-size: $font__title-header-size;
+	font-family: $font__general;
+}
+
+.header__subtitle {
+	margin-left: 13px;
+	font-size: $font__progress-bar-size;
+	font-family: $font__general;
+	text-transform: uppercase;
+}
+
+.header__image-section {
+	position: relative;
+}
+
+.header__image-play-container {
+	background-color: $green__primary-color;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 80%;
+	top: 85%;
+}
+
+.header__image-play {
+	position: absolute;
+	left: 20px;
+	top: 15px;
+	height: 20px;
+	width: 18px;
+}
