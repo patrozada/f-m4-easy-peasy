@@ -5,6 +5,7 @@ import { ENDPOINT } from "./services/fetchPostComments";
 
 import './App.scss';
 import Game from './components/Game';
+import Home from './components/Home';
 
 
 import { fetchGetComments } from './services/fetchGetComments';
@@ -56,22 +57,28 @@ class App extends React.Component {
 	render() {
 		const { value, games } = this.state;
 		return (
-			<Switch>
-				<Route exact path="/game/:id" render={routerProps => (
-					<Game 
-					games={games}
-					value={value}
-					handleTextArea={this.handleTextArea}
-					clearTextArea={this.clearTextArea} />
-				)}/>
-				<Route exact path="/game/:id/comment" render={routerProps => (
-					<ShareIdea
-						value={this.state.value}
+			<React.Fragment>
+				<Switch>
+					<Route exact path="/" render={routerProps => (
+						<Home />
+					)}/>
+					)}/>	
+					<Route exact path="/game/:id" render={routerProps => (
+						<Game 
+						games={games}
+						value={value}
 						handleTextArea={this.handleTextArea}
-						handleButtonClick={this.handleButtonClick}
-					/>
-				)}/>
-			</Switch>
+						clearTextArea={this.clearTextArea} />
+					)}/>
+					<Route exact path="/game/:id/comment" render={routerProps => (
+						<ShareIdea
+							value={this.state.value}
+							handleTextArea={this.handleTextArea}
+							handleButtonClick={this.handleButtonClick}
+						/>
+					)}/>
+				</Switch>
+			</React.Fragment>
 		);
 	}
 }

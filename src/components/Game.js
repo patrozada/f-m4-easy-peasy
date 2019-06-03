@@ -13,7 +13,7 @@ class Game extends React.Component {
 	render() {
 		const {games} = this.props;
 		return (
-			<div>
+			<React.Fragment>
 				{games
 					.filter(game => game.id === 21)
 					.map(game => {
@@ -22,16 +22,11 @@ class Game extends React.Component {
 						<Link to={`/game/${game.id}/comment`}>
 							<button>Share your ideas</button>
 						</Link>
-						{/* <ShareIdea
-							value={this.props.value}
-							handleTextArea={this.props.handleTextArea}
-							handleButtonClick={this.handleButtonClick}
-						/> */}
 						<Comments game={game} />
 						<Feedback game={game} />
 				    <MoreGames />
 						</div>})}
-			</div>
+			</React.Fragment>
 		);
 	}
 }
