@@ -15,23 +15,24 @@ class Game extends React.Component {
 			}
 		).catch(error => console.log(error));
 	};
-	filterComments() {
-		const filteredComments = this.props.game.comments.filter(comment =>
-			comment.body ? comment.body.length > 10 : false
-		);
-		return filteredComments;
-	}
 
 	render() {
+		const {games} = this.props;
 		return (
 			<div>
-				<Comments comments={this.filterComments()} />
-				<Feedback game={this.props.game} />
-				<ShareIdea
-					value={this.props.value}
-					handleTextArea={this.props.handleTextArea}
-					handleButtonClick={this.handleButtonClick}
-				/>
+				{games
+					.filter(game => game.id === 21)
+					.map(game => {
+						return <div>
+						<Comments game={game} />
+						<Feedback filterGame={this.props.filterGame} />
+						<ShareIdea
+							value={this.props.value}
+							handleTextArea={this.props.handleTextArea}
+							handleButtonClick={this.handleButtonClick}
+						/>
+						</div>})}
+			
 			</div>
 		);
 	}
