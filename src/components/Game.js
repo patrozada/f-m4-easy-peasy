@@ -4,16 +4,6 @@ import Feedback from './Feedback';
 import ShareIdea from './ShareIdea';
 
 class Game extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			game: {}
-		};
-	}
-
-	componentWillMount() {
-		this.setState({ game: this.props.game });
-	}
 	handleButtonClick = () => {
 		const apiUrl = 'url';
 		fetch(
