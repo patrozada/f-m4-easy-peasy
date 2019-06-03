@@ -3,21 +3,12 @@ import Header from "./Header";
 import Carousel from "./Carousel"
 import Comments from "./Comments";
 import Feedback from "./Feedback";
-import ShareIdea from "./ShareIdea";
-import CommentSection from "./CommentSection";
 import MoreGames from "./MoreGames";
-import { ENDPOINT } from "./../services/fetchPostComments";
+import { Link } from 'react-router-dom';
+
 
 class Game extends React.Component {
-	handleButtonClick = () => {
-		fetch(
-			`${ENDPOINT}?body=${this.props.value}&game_id=${21}&parent_id=6281`,
-			{
-				method: 'POST'
-			}
-		).catch(error => console.log(error));
-		this.props.clearTextArea();
-	};
+	
 
 	render() {
 		const {games} = this.props;
@@ -28,15 +19,16 @@ class Game extends React.Component {
 					.map(game => {
 						return <div>
             <Header />
-				    <Carousel />
-						<Comments game={game} />
-						<Feedback game={game} />
-						<ShareIdea
+						<Link to={`/game/${game.id}/comment`}>
+							<button>Share your ideas</button>
+						</Link>
+						{/* <ShareIdea
 							value={this.props.value}
 							handleTextArea={this.props.handleTextArea}
 							handleButtonClick={this.handleButtonClick}
-						/>
-            <CommentSection />
+						/> */}
+						<Comments game={game} />
+						<Feedback game={game} />
 				    <MoreGames />
 						</div>})}
 			</div>
