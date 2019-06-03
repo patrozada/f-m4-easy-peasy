@@ -1,13 +1,14 @@
 import React from 'react';
+import { ENDPOINT_FEEDBACK } from './../services/fetchPostFeedback';
 
 class Feedback extends React.Component {
 	handleFeedback = e => {
 		const { value } = e.target;
 
-		fetch('url', {
+		fetch(ENDPOINT_FEEDBACK, {
 			method: 'POST',
 			body: JSON.stringify({
-				parent_id: 5858,
+				parent_id: 6281,
 				pod_id: 609,
 				user_action: value,
 				game_id: this.props.game.id
