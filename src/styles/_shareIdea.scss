@@ -2,15 +2,32 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 600px;
+    align-items: center;
+    background-color: $background-color__nav-bar;
+    padding: 50px 20px 20px 40px;
     min-height: 100vh;
-    background-color: $background-color;
+    width: 100vw;
+}
+.shareIdea--input__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+}
+.shareIdea--image{
+    height: 150px;
 }
 
 .shareIdea--input{
     border-radius: 5px;
+    border: 1px solid white;
+    width: 100%;
+    margin-bottom: 30px;
 }
 
 .shareIdea--button{
     margin-bottom: 40px;
+    width: 80%;
+    text-transform: capitalize;
 }
