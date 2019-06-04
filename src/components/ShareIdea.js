@@ -1,12 +1,21 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
-import ShareIdeaImage from './../images/103-onboarding@1x.png'
+import {Link} from 'react-router-dom';
+import ShareIdeaImage from './../images/103-onboarding@1x.png';
+import Arrow from './../images/chevron-green@1x.png';
 
 class ShareIdea extends React.Component {
   render() {
-    console.log(this.props.match.params.id)
+    const { id } = this.props.match.params;
     return (
       <div className="shareIdea--container">
+        <nav className="shareIdea--nav">
+          <div className="shareIdea--container__nav">
+            <Link to={`/game/${id}`}>
+              <button className="shareIdea--button__back" type="button"><img src={Arrow} alt="go back" className="shareIdea--button__image"/>Back</button>
+            </Link>
+          </div>
+        </nav>
         <img src={ShareIdeaImage} alt="happy beens talking" className="shareIdea--image"/>
         <form method="POST" className="shareIdea--input__container">
           <label htmlFor="comment" className="shareIdea--title">Share ideas or observations</label>
@@ -23,7 +32,6 @@ class ShareIdea extends React.Component {
           <Button 
           type="button" 
           onClick={(e) => this.props.handleButtonClick(e, this.props.match.params.id)} variant="light"
-
           style={{
             backgroundColor:'#7db238',
             color: 'white',
@@ -31,7 +39,7 @@ class ShareIdea extends React.Component {
             textTransform:'uppercase',
             fontSize:'12px',
             border:'1px solid #7db238'
-            }}className="shareIdea--button">Add your comment</Button>
+            }}className="shareIdea--button__share">Add your comment</Button>
         </form>
       </div>
     );
