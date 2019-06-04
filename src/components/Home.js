@@ -47,11 +47,11 @@ class Home extends React.Component {
             </Card.Body>
           </Card>
         </div>
-        <div>
+        <div className="carousel__landing-section">
           <Slider {...settings}>
               {this.props.games.map(game => 
-                <div className="carousel-card__wrapper">
-                  <Card>
+                <div className="carousel-card__landing-wrapper">
+                  <Card className="carousel-card__landing">
                     <Card.Img variant="top" src={game.image_url} />
                     <Card.Body>
                       <Card.Title>{game.name}</Card.Title>
