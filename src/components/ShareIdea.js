@@ -8,8 +8,8 @@ class ShareIdea extends React.Component {
       <div className="shareIdea--container">
         <img src={ShareIdeaImage} alt="happy beens talking" className="shareIdea--image"/>
         <form method="POST" className="shareIdea--input__container">
-          <label htmlFor="comment">Share ideas or observations</label>
-          <p>Let others in your pod how your play went!</p>
+          <label htmlFor="comment" className="shareIdea--title">Share ideas or observations</label>
+          <p className="shareIdea--subtitle">Let others in your pod how your play went!</p>
           <textarea
             name="comment"
             id="comment"
