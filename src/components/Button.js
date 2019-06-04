@@ -1,7 +1,10 @@
 import React from 'react';
 
-const Button = () => {
-  return ( <button>Share your ideas or observations</button> );
+const Button = (props) => {
+  console.log('button', props.gameID)
+  return (
+    <button name={props.gameID} onClick={props.handleButtonClick}>Share your ideas or observations</button>
+  );
 }
  
 export default Button;

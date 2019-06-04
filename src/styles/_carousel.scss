@@ -1,45 +1,46 @@
 .carousel-card {
-    margin: 0 2em;
-    padding: 28px;
-    min-width: 300px;
-    max-width: 600px;
-    height: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  
-    &__instructions {
-      font-family: $font__general;
-      font-size: $font__general-size;
-  
-      h1 {
-        @extend .carousel-card__instructions;
-        font-size: $font__title-size;
-        margin-bottom: 10px;
-      }
-  
-      ol {
-        transform: translateX(13px);
-        li {
-          padding-left: 15px;
-          margin-bottom: 0;
-        }
-      }
-    }
-  
-    &__level {
+  margin: 0 2em;
+  padding: 28px;
+  min-width: 300px;
+  max-width: 600px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__instructions {
+    font-family: $font__general;
+    font-size: $font__general-size;
+
+    h1 {
       @extend .carousel-card__instructions;
-  
-      &--title {
-        @extend .carousel-card__instructions;
-        font-size: $font__title-size;
-        margin-bottom: 10px;
-      }
-  
-      &--image {
-        display: block;
-        margin: 20px auto;
+      font-size: $font__title-size;
+      margin-bottom: 10px;
+    }
+
+    ol {
+      transform: translateX(13px);
+      li {
+        padding-left: 15px;
+        margin-bottom: 0;
       }
     }
-  
   }
+
+  &__level {
+    @extend .carousel-card__instructions;
+
+    &--title {
+      @extend .carousel-card__instructions;
+      font-size: $font__title-size;
+      margin-bottom: 10px;
+    }
+
+    &--image {
+      display: block;
+      margin: 20px auto;
+    }
+  }
+
+}
+
