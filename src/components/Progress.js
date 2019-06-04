@@ -15,27 +15,45 @@ class Progress extends React.Component {
 	};
 	render() {
 		return (
-			<section>
-				<p>How the game helps your child’s progress</p>
-				<div>
+			<section className="progress--section">
+				<p className="progress--title">
+					How the game helps your child’s progress
+				</p>
+				<div className="progress--subtitle__container">
 					<div>
 						<p>Physical</p>
 						<p>Level 1</p>
 					</div>
-					<ProgressBar variant="success" now={this.randomNrProgress(1, 100)} />
-					<img src={PhisicalIcon} alt="Phisical-Icon" />
-					<div>
+					ç
+					<div className="progress--bars__container">
+						<ProgressBar
+							variant="success"
+							now={this.randomNrProgress(1, 100)}
+						/>
+						<img src={PhisicalIcon} alt="Phisical-Icon" />
+					</div>
+					<div className="progress--subtitle__container">
 						<p>Communication</p>
 						<p>Level 1</p>
 					</div>
-					<ProgressBar variant="info" now={this.randomNrProgress(1, 100)} />
-					<img src={CommunicationIcon} alt="Communication-Icon" />
-					<div>
+					<div className="progress--bars__container">
+						<ProgressBar
+							variant="success"
+							now={this.randomNrProgress(1, 100)}
+						/>
+						<img src={CommunicationIcon} alt="Communication-Icon" />
+					</div>
+					<div className="progress--subtitle__container">
 						<p>World</p>
 						<p>Level 1</p>
 					</div>
-					<ProgressBar variant="warning" now={this.randomNrProgress(1, 100)} />
-					<img src={WorldIcon} alt="World-Icon" />
+					<div className="progress--bars__container">
+						<ProgressBar
+							variant="success"
+							now={this.randomNrProgress(1, 100)}
+						/>
+						<img src={WorldIcon} alt="World-Icon" />
+					</div>
 				</div>
 			</section>
 		);
