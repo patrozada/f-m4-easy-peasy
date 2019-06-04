@@ -17,7 +17,6 @@ class Home extends React.Component {
       slidesToScroll: 1
     };
     const initialGame = this.props.games.find(game => parseInt(game.id) === 21);
-    console.log(initialGame);
     return initialGame === undefined ? <p>Loading...</p> :(
       <React.Fragment>
         <NavigationBar />
@@ -51,8 +50,8 @@ class Home extends React.Component {
         </div>
         <div className="carousel__landing-section">
           <Slider {...settings}>
-              {this.props.games.map(game => 
-                <div className="carousel-card__landing-wrapper">
+              {this.props.games.map((game, index) => 
+                <div key={index} className="carousel-card__landing-wrapper">
                   <Card className="carousel-card__landing">
                     <Card.Img variant="top" src={game.image_url} />
                     <Card.Body>
