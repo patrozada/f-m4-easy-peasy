@@ -1,13 +1,36 @@
 .shareIdea--container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: $background-color__nav-bar;
-    padding: 50px 20px 20px 20px;
+    padding: 0px 20px 40px 20px;
     min-height: 100vh;
     width: 100vw;
     font-family: $font__general;
+}
+.shareIdea--nav{
+    width: 100vw;
+    background-color: rgb(237,245,227);
+    height: 36px;
+    top:0;
+}
+.shareIdea--container__nav{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.shareIdea--button__back{
+    background-color: transparent;
+    border: none;
+    color: #7db238;
+    font-size: $font__nav-bar-size;
+    text-transform: uppercase;
+    margin-left: 10px;
+}
+.shareIdea--button__image{
+    height: 8px;
+    padding-right: 5px;
+    margin-bottom: 1px;
 }
 .shareIdea--input__container{
     display: flex;
@@ -35,7 +58,7 @@
     width: 300px;
 }
 
-.shareIdea--button{
+.shareIdea--button__share{
     width: 80%;
     height: 40px;
     text-transform: capitalize;
