@@ -7,7 +7,7 @@
     height: 60px;
     position: fixed;
     bottom: 0;
-    width: 600px;
+    max-width: 600px;
   }
   &--title{
     color: $text-color__ligth;
