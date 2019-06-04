@@ -1,4 +1,5 @@
 import React from "react";
+import Button from 'react-bootstrap/Button';
 
 class ShareIdea extends React.Component {
   render() {
@@ -14,10 +15,9 @@ class ShareIdea extends React.Component {
             rows="10"
             onChange={this.props.handleTextArea}
             value={this.props.value}
+            className=""
           />
-          <button type="button" onClick={this.props.handleButtonClick}>
-            Add your comment
-          </button>
+          <Button type="button" onClick={this.props.handleButtonClick} variant="success">Add your comment</Button>
         </form>
       </React.Fragment>
     );
