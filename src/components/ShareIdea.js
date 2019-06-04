@@ -22,9 +22,11 @@ class ShareIdea extends React.Component {
           />
           <Button 
           type="button" 
-          onClick={(e) => this.props.handleButtonClick(e, this.props.match.params.id)} variant="success" 
+          onClick={(e) => this.props.handleButtonClick(e, this.props.match.params.id)} variant="light"
+
           style={{
             backgroundColor:'#7db238',
+            color: 'white',
             fontFamily:"'Lato', sans-serif",
             textTransform:'uppercase',
             fontSize:'12px',
