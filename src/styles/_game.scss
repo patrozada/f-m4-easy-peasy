@@ -1,5 +1,10 @@
-.button__game {
-  background-color: $green__primary-color;
-  color: $text-color__ligth;
-  text-transform: uppercase;
+.button__positionning--wrapper {
+  margin: 60px auto 30px auto;
+  text-align: center;
+}
+
+.button__game-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
 }
