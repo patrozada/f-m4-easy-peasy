@@ -9,6 +9,10 @@ class Progress extends React.Component {
 		super(props);
 		this.state = {};
 	}
+
+	randomNrProgress = (min, max) => {
+		return Math.random() * (max - min) + min;
+	};
 	render() {
 		return (
 			<section>
@@ -18,19 +22,19 @@ class Progress extends React.Component {
 						<p>Physical</p>
 						<p>Level 1</p>
 					</div>
-					<ProgressBar variant="success" now={40} />
+					<ProgressBar variant="success" now={this.randomNrProgress(1, 100)} />
 					<img src={PhisicalIcon} alt="Phisical-Icon" />
 					<div>
 						<p>Communication</p>
 						<p>Level 1</p>
 					</div>
-					<ProgressBar variant="info" now={20} />
+					<ProgressBar variant="info" now={this.randomNrProgress(1, 100)} />
 					<img src={CommunicationIcon} alt="Communication-Icon" />
 					<div>
 						<p>World</p>
 						<p>Level 1</p>
 					</div>
-					<ProgressBar variant="warning" now={60} />
+					<ProgressBar variant="warning" now={this.randomNrProgress(1, 100)} />
 					<img src={WorldIcon} alt="World-Icon" />
 				</div>
 			</section>
