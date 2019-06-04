@@ -21,8 +21,6 @@ class App extends React.Component {
 		this.clearTextArea = this.clearTextArea.bind(this);
 		this.insertCommentInGame = this.insertCommentInGame.bind(this);
 		this.updateGamesWithNewGame = this.updateGamesWithNewGame.bind(this);
-
-
 	}
 
 	componentDidMount() {
