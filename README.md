@@ -1,4 +1,5 @@
 ![easy peasy logo](./src/images/201-logo@1x.png)
+![adalab logo](./src/images/logo_adalab_155x61.png)
 Name of the project
 Additional information or tagline
 
