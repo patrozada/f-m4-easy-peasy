@@ -15,9 +15,9 @@ class ShareIdea extends React.Component {
             rows="10"
             onChange={this.props.handleTextArea}
             value={this.props.value}
-            className=""
+            className="shareIdea--input"
           />
-          <Button type="button" onClick={this.props.handleButtonClick} variant="success">Add your comment</Button>
+          <Button type="button" onClick={this.props.handleButtonClick} variant="success" style={{backgroundColor:`#7db238`}}>Add your comment</Button>
         </form>
       </React.Fragment>
     );
