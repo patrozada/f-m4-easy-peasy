@@ -1,4 +1,4 @@
-![easy peasy logo](./src/images/201-logo.svg)
+![easy peasy logo](./src/images/201-logo@1x.png)
 Name of the project
 Additional information or tagline
 
