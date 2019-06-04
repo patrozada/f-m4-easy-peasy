@@ -6,9 +6,9 @@ class Comments extends React.Component {
     const gameCommentsWithBody = game.comments.filter(comment => comment.body ? comment.body.length > 1 : false);
     const threeLastComments = gameCommentsWithBody.slice(gameCommentsWithBody.length - 3)
     return (
-      <div>
+      <div className="comments__container">
         {threeLastComments.map(comment => 
-          <p>{comment.body}</p>
+          <q className="comments__unit">{comment.body}</q>
         )}
       </div>
     );
