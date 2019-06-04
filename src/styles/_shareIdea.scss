@@ -1,0 +1,16 @@
+.shareIdea--container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 600px;
+    min-height: 100vh;
+    background-color: $background-color;
+}
+
+.shareIdea--input{
+    border-radius: 5px;
+}
+
+.shareIdea--button{
+    margin-bottom: 40px;
+}
