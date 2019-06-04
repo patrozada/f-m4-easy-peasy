@@ -56,7 +56,7 @@ class App extends React.Component {
 	render() {
 		const { value, games } = this.state;
 		return (
-			<React.Fragment>
+			<div className="general-container">
 				<Switch>
 					<Route exact path="/" render={routerProps => (
 						<Home />
@@ -78,7 +78,7 @@ class App extends React.Component {
 						/>
 					)}/>
 				</Switch>
-			</React.Fragment>
+			</div>
 		);
 	}
 }

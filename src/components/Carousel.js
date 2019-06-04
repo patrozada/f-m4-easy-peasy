@@ -2,14 +2,28 @@ import React from 'react';
 import CarouselInstructions from './CarouselInstructions';
 import CarouselLevel1 from './CarouselLevel1';
 import CarouselLevel2 from './CarouselLevel2';
+import Card from 'react-bootstrap/Card';
+
 
 class Carousel extends React.Component{
   render(){
     return(
       <div>
-        <CarouselInstructions game = {this.props.game}/>
-        <CarouselLevel1 game = {this.props.game}/>
-        <CarouselLevel2 game = {this.props.game}/>
+        <Card className="carousel-card">
+          <Card.Body>
+            <CarouselInstructions game = {this.props.game}/>
+          </Card.Body>
+        </Card>
+        <Card className="carousel-card">
+          <Card.Body>
+            <CarouselLevel1 game = {this.props.game}/>
+          </Card.Body>
+        </Card>
+        <Card className="carousel-card">
+          <Card.Body>
+            <CarouselLevel2 game = {this.props.game}/>
+          </Card.Body>
+        </Card>
       </div>
 
     )
