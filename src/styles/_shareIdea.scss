@@ -6,7 +6,6 @@
     background-color: $background-color__nav-bar;
     padding: 0px 20px 40px 20px;
     min-height: 100vh;
-    width: 100vw;
     font-family: $font__general;
 }
 .shareIdea--nav{
@@ -25,7 +24,7 @@
     color: #7db238;
     font-size: $font__nav-bar-size;
     text-transform: uppercase;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .shareIdea--button__image{
     height: 8px;

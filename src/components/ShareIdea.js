@@ -6,12 +6,12 @@ import Arrow from './../images/chevron-green@1x.png';
 
 class ShareIdea extends React.Component {
   render() {
-    console.log(this.props.match.params.id)
+    const { id } = this.props.match.params;
     return (
       <div className="shareIdea--container">
         <nav className="shareIdea--nav">
           <div className="shareIdea--container__nav">
-            <Link to="./game/{gameID}">
+            <Link to={`/game/${id}`}>
               <button className="shareIdea--button__back" type="button"><img src={Arrow} alt="go back" className="shareIdea--button__image"/>Back</button>
             </Link>
           </div>
@@ -32,7 +32,6 @@ class ShareIdea extends React.Component {
           <Button 
           type="button" 
           onClick={(e) => this.props.handleButtonClick(e, this.props.match.params.id)} variant="light"
-
           style={{
             backgroundColor:'#7db238',
             color: 'white',
