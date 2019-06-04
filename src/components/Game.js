@@ -21,7 +21,7 @@ class Game extends React.Component {
 								<Header game={game} />
 								<Carousel game={game} />
 								<div className="button__positionning--wrapper">
-									<Link className="button__game-wrapper" to={`/game/${game.id}/comment`}>
+									<Link game={game}className="button__game-wrapper" to={`/game/${game.id}/comment`}>
 										<Button 
 											style={{backgroundColor: '#628a2c', 
 															border: '1px solid #628a2c',
@@ -29,6 +29,7 @@ class Game extends React.Component {
 															fontSize: '12px',
 															textTransform: 'uppercase'
 														}}
+											game={game}
 										>Share your comments</Button>
 									</Link>
 								</div>

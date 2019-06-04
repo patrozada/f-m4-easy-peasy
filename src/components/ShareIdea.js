@@ -4,6 +4,7 @@ import ShareIdeaImage from './../images/103-onboarding@1x.png'
 
 class ShareIdea extends React.Component {
   render() {
+    console.log(this.props)
     return (
       <div className="shareIdea--container">
         <img src={ShareIdeaImage} alt="happy beens talking" className="shareIdea--image"/>

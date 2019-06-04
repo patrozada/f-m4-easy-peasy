@@ -4,15 +4,14 @@
 
 @import 'styles/variables';
 @import 'styles/main';
-@import 'styles/comments';
-
-@import 'styles/feedback';
-@import 'styles/carousel';
-@import 'styles/nextGame';
 @import 'styles/game';
 
-@import 'components/header.scss';
+@import 'styles/header';
+@import 'styles/carousel';
 @import 'styles/shareIdea.scss';
+@import 'styles/comments';
+@import 'styles/nextGame';
+@import 'styles/feedback';
 @import 'styles/modal';
 
 
