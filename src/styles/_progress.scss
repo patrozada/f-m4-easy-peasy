@@ -1,0 +1,62 @@
+.progress {
+	&--section {
+		display: flex;
+		margin-left: 15px;
+	}
+
+	&--bars__container {
+		width: 263px;
+	}
+
+	&--bar {
+		height: 7px;
+		border-radius: 50px;
+	}
+
+	&--subtitle__container {
+		display: flex;
+		justify-content: space-between;
+		height: 17px;
+	}
+
+	&--subtitle__apptitudes {
+		text-transform: uppercase;
+		color: $font__general-color;
+		font-size: $font__general-size;
+		font-family: $font__general;
+		font-weight: bold;
+	}
+
+	&--subtitle__level {
+		font-size: $font__general-size;
+		font-family: $font__general;
+		color: $green__primary-color;
+	}
+
+	&--images {
+		width: 28px;
+		height: 28px;
+		margin-right: 20px;
+	}
+}
+
+.progress-title {
+	font-family: $font__general;
+	text-align: center;
+	font-size: $font__section-title-size;
+	font-weight: bold;
+	margin-top: 15px;
+}
+
+.progress-container {
+	padding-top: 16px;
+	padding-bottom: 33px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.bg-success {
+	border-radius: 50px;
+}

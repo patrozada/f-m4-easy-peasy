@@ -6,6 +6,7 @@ import Arrow from './../images/chevron-green@1x.png';
 
 class ShareIdea extends React.Component {
   render() {
+    console.log(this.props.match.params.id)
     return (
       <div className="shareIdea--container">
         <nav className="shareIdea--nav">
@@ -29,9 +30,9 @@ class ShareIdea extends React.Component {
             className="shareIdea--input"
           />
           <Button 
-          type="button"
-          variant="light"
-          onClick={this.props.handleButtonClick} 
+          type="button" 
+          onClick={(e) => this.props.handleButtonClick(e, this.props.match.params.id)} variant="light"
+
           style={{
             backgroundColor:'#7db238',
             color: 'white',

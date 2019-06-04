@@ -7,6 +7,7 @@ import Card from 'react-bootstrap/Card';
 
 class Carousel extends React.Component {
   render() {
+    console.log('props de carousel', this.props.game.id)
     var settings = {
       dots: true,
       infinite: true,
