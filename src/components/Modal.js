@@ -6,9 +6,10 @@ function  Modal (props){
 
   return (
     <div className={showHideClassName}>
-      <section className='modal-main'>
-        <p>This is Modal</p>
-        <button
+      <section className='modal--main'>
+        <div className= 'modal--image'></div>
+        <h3 className= 'modal--message'>Thanks for your feedback!</h3>
+        <button className='modal--button'
           onClick={handleClose}
         >
           Close
