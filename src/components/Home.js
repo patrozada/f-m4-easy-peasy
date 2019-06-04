@@ -39,11 +39,13 @@ class Home extends React.Component {
               <Card.Text>
                 {initialGame.description}
               </Card.Text>
-              <Button style={{
+              <Link to={`/game/${21}`}>
+                <Button style={{
                   backgroundColor: '#ffffff',
                   color: '#EB4C54',
                   border: '1px solid #EB4C54'
                 }}>Play new game</Button>
+              </Link>
             </Card.Body>
           </Card>
         </div>
