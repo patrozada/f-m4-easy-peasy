@@ -30,6 +30,14 @@
 	background-position: center;
 }
 
+.header__image-game--landing {
+	height: 200px;
+	background-color: $background-color;
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
 .header__title {
 	margin-left: 13px;
 	font-size: $font__title-header-size;

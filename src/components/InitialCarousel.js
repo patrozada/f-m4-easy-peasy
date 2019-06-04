@@ -1,12 +1,9 @@
 import React from 'react';
 import Slider from "react-slick";
-import CarouselInstructions from './CarouselInstructions';
-import CarouselLevel1 from './CarouselLevel1';
-import CarouselLevel2 from './CarouselLevel2';
-import Card from 'react-bootstrap/Card';
 
 class Carousel extends React.Component {
   render() {
+    console.log('props de carousel', this.props.game.id)
     var settings = {
       dots: true,
       infinite: true,
@@ -16,8 +13,8 @@ class Carousel extends React.Component {
     };
     return (
       <Slider {...settings}>
-        <div>
-          <Card>
+        <div className="carousel-card__wrapper">
+          <Card className="carousel-card">
             <Card.Body>
               <CarouselInstructions game = {this.props.game}/>
             </Card.Body>
