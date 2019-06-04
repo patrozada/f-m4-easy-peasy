@@ -15,22 +15,19 @@ class Game extends React.Component {
 				{games
 					.filter(game => game.id === 21)
 					.map(game => {
-						return (
-							<div>
-								<Header game={game} />
-								<Link to={`/game/${game.id}/comment`}>
-									<Button
-										gameID={game.id}
-										handleButtonClick={this.props.handleButtonClick}
-									/>
-								</Link>
-								<Carousel game={game} />
-								<Comments game={game} />
-								<Feedback game={game} />
-								<MoreGames />
-							</div>
-						);
-					})}
+						return <div>
+							<Header game={game} />
+							<Link to={`/game/${game.id}/comment`}>
+								<Button
+									gameID={game.id}
+									handleButtonClick={this.props.handleButtonClick}
+								/>							</Link>
+							<Carousel game={game}/>
+							<Comments game={game} />
+							<Feedback game={game} />
+							<MoreGames games={games} bgc="selected-game"/>
+							<MoreGames games={games} bgc="ordinary-game"/>
+						</div>})}
 			</React.Fragment>
 		);
 	}
