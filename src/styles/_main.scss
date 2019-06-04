@@ -8,10 +8,14 @@
 body {
   margin: 0 auto;
   min-height: 100vh;
-  background-color: $background-color__nav-bar;
+  background-color: #cdd85b;
 }
 
 .general-container {
   max-width: 600px;
+  margin: 0 auto;
+  background-color: $background-color__nav-bar;
+  overflow: hidden;
+
 }
 
