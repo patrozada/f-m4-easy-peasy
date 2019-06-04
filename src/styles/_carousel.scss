@@ -8,6 +8,10 @@
   justify-content: center;
   align-items: center;
 
+  &__wrapper {
+    margin: 40px 0 0 0;
+  }
+
   &__instructions {
     font-family: $font__general;
     font-size: $font__general-size;

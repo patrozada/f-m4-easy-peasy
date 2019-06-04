@@ -1,0 +1,42 @@
+.shareIdea--container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $background-color__nav-bar;
+    padding: 50px 20px 20px 20px;
+    min-height: 100vh;
+    width: 100vw;
+    font-family: $font__general;
+}
+.shareIdea--input__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+}
+.shareIdea--image{
+    height: 150px;
+    margin-bottom: 20px;
+}
+.shareIdea--title{
+    font-weight: bold;
+}
+.shareIdea--subtitle{
+    text-transform: uppercase;
+    font-size: 10px;
+}
+.shareIdea--input{
+    border-radius: 5px;
+    border: 1px solid white;
+    max-width: 600px;
+    margin-bottom: 30px;
+    width: 300px;
+}
+
+.shareIdea--button{
+    width: 80%;
+    height: 40px;
+    text-transform: capitalize;
+}

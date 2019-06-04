@@ -36,7 +36,7 @@ class Header extends React.Component {
 					</nav>
 				</section>
 
-				<section>
+				<section className="header__title--wrapper">
 					<h1 className="header__title">{game.name}</h1>
 					<p className="header__subtitle">{game.description}</p>
 				</section>
