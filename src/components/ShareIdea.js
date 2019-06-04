@@ -4,7 +4,7 @@ import ShareIdeaImage from './../images/103-onboarding@1x.png'
 
 class ShareIdea extends React.Component {
   render() {
-    console.log(this.props)
+    console.log(this.props.match.params.id)
     return (
       <div className="shareIdea--container">
         <img src={ShareIdeaImage} alt="happy beens talking" className="shareIdea--image"/>
@@ -22,7 +22,7 @@ class ShareIdea extends React.Component {
           />
           <Button 
           type="button" 
-          onClick={this.props.handleButtonClick} variant="success" 
+          onClick={(e) => this.props.handleButtonClick(e, this.props.match.params.id)} variant="success" 
           style={{
             backgroundColor:'#7db238',
             fontFamily:"'Lato', sans-serif",

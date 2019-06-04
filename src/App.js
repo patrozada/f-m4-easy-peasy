@@ -38,14 +38,15 @@ class App extends React.Component {
 		});
 	}
 
-	handleButtonClick = () => {
+	handleButtonClick = (e, gameID) => {
+		console.log('handleButtonClick', e, gameID)
 		fetch(
-			`${ENDPOINT}?body=${this.state.value}&game_id=${21}&parent_id=6281`,
+			`${ENDPOINT}?body=${this.state.value}&game_id=${gameID}&parent_id=6281`,
 			{
 				method: 'POST'
 			}
 		).catch(error => console.log(error));
-		this.updateGamesWithNewGame();
+		this.updateGamesWithNewGame(gameID);
 		this.clearTextArea();
 	};
 
@@ -55,12 +56,12 @@ class App extends React.Component {
 			});
 	}
 
-	insertCommentInGame(){
+	insertCommentInGame(gameID){
 		const comment = {
 			body: this.state.value,
 		}
 		const game = this.state.games
-		.find(game => game.id === 21)
+		.find(game => parseInt(game.id) === parseInt(gameID))
 
 		console.log(game.comments);
 		
@@ -75,12 +76,12 @@ class App extends React.Component {
 		return updatedGame;
 	}
 
-	updateGamesWithNewGame(){
-		const updatedGame = this.insertCommentInGame();
+	updateGamesWithNewGame(gameID){
+		const updatedGame = this.insertCommentInGame(gameID);
 		console.log(updatedGame);
 		
 		//find index of game 21
-		const gameIndex = this.state.games.findIndex(game => game.id === 21);
+		const gameIndex = this.state.games.findIndex(game => game.id === gameID);
 		console.log(gameIndex);
 		
 		//replace game with updated game
@@ -115,6 +116,7 @@ class App extends React.Component {
 					/>
 					<Route exact path="/game/:id/comment" render={routerProps => (
 						<ShareIdea
+							match={routerProps.match}
 							value={this.state.value}
 							handleTextArea={this.handleTextArea}
 							handleButtonClick={this.handleButtonClick}
