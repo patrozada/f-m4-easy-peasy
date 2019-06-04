@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from './Header';
-import Button from './Button';
 import Carousel from './Carousel';
 import Comments from './Comments';
 import Feedback from './Feedback';
 import MoreGames from './MoreGames';
 import { Link } from 'react-router-dom';
 import Progress from './Progress';
+import Button from 'react-bootstrap/Button';
 
 class Game extends React.Component {
 	render() {
@@ -21,10 +21,7 @@ class Game extends React.Component {
 								<Header game={game} />
 								<Carousel game={game} />
 								<Link to={`/game/${game.id}/comment`}>
-									<Button
-										gameID={game.id}
-										handleButtonClick={this.props.handleButtonClick}
-									/>
+									<Button style={{backgroundColor: '#628a2c', border: '1px solid #628a2c'}}>Share your ideas or comments</Button>
 								</Link>
 								<Comments game={game} />
 								<Progress />
