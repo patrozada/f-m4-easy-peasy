@@ -1,5 +1,4 @@
 import React from 'react';
-
 import PhisicalIcon from '../images/physical-1@1x.png';
 import CommunicationIcon from '../images/communication-1@1x.png';
 import WorldIcon from '../images/world-1@1x.png';
@@ -12,6 +11,9 @@ class Progress extends React.Component {
 	render() {
 		return (
 			<section>
+				<p className="progress-title">
+					How the game helps your child’s progress
+				</p>
 				<ProgressComponent
 					aptidude="Physical"
 					icon={PhisicalIcon}

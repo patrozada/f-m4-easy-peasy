@@ -1,6 +1,7 @@
 .progress {
 	&--section {
 		display: flex;
+		margin-left: 35px;
 	}
 
 	&--bars__container {
@@ -9,14 +10,6 @@
 
 	&--progress--bar {
 		width: 263px;
-	}
-
-	&--title {
-		font-family: $font__general;
-		text-align: center;
-		font-size: $font__section-title-size;
-		font-weight: bold;
-		margin-top: 15px;
 	}
 
 	&--subtitle__container {
@@ -37,4 +30,18 @@
 		font-family: $font__general;
 		color: $green__primary-color;
 	}
+
+	&--images {
+		width: 28px;
+		height: 28px;
+		margin-right: 20px;
+	}
+}
+
+.progress-title {
+	font-family: $font__general;
+	text-align: center;
+	font-size: $font__section-title-size;
+	font-weight: bold;
+	margin-top: 15px;
 }

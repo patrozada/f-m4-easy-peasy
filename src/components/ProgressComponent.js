@@ -5,7 +5,11 @@ class ProgressComponent extends React.Component {
 	render() {
 		return (
 			<div className="progress--section">
-				<img src={this.props.icon} alt={this.props.iconName} />
+				<img
+					className="progress--images"
+					src={this.props.icon}
+					alt={this.props.iconName}
+				/>
 				<div className="progress--bars__container">
 					<div className="progress--subtitle__container">
 						<p className="progress--subtitle__apptitudes">
