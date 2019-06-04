@@ -4,6 +4,7 @@
     display: flex;
     background-color: $green__primary-color;
     height: 50px;
+    padding: 5px 38px;
   }
   &--title{
     color: $text-color__ligth;
@@ -11,13 +12,12 @@
     font-family: $font__general;
     font-size: $font__general-size;
     height: 100%;
-    width:35%;
-    margin:5px 38px;
+    width:30%;
   }
   &--input__container{
-    width:65%;
+    width:70%;
     display: flex;
-
+    align-items: center;
   }
   &--icon__container{
     height: 45px;
@@ -27,9 +27,16 @@
     align-items: center;
     background-color:$background-color;
     border-radius: 5px;
-    margin: 5px 2px;
+    margin: 2px;
   }
   &--icon{
     height: 35px;
+  }
+  &--radio-button{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
   }
 }

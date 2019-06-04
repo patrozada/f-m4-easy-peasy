@@ -32,25 +32,25 @@ class Feedback extends React.Component {
 					onChange={this.handleFeedback}
 					action='POST'>
 					<label htmlFor='1'>
-						<input type='radio' value={1} name='feedback' id='1' />
+						<input className="feedback--radio-button" type='radio' value={1} name='feedback' id='1' />
 						<div className='feedback--icon__container'>
 							<img className="feedback--icon" src={sad} alt='sad face' />
 						</div>
 					</label>
 					<label htmlFor='2'>
-						<input type='radio' value={2} name='feedback' id='2' />
+						<input className="feedback--radio-button" type='radio' value={2} name='feedback' id='2' />
 						<div className='feedback--icon__container'>
 							<img className="feedback--icon" src={neutral} alt='neutral face' />
 						</div>
 					</label>
 					<label htmlFor='3'>
-						<input type='radio' value={3} name='feedback' id='3' />
+						<input className="feedback--radio-button" type='radio' value={3} name='feedback' id='3' />
 						<div className='feedback--icon__container'>
 							<img className="feedback--icon" src={happy} alt='happy face' />
 						</div>
 					</label>
 					<label htmlFor='4'>
-						<input type='radio' value={4} name='feedback' id='4' />
+						<input className="feedback--radio-button" type='radio' value={4} name='feedback' id='4' />
 						<div className='feedback--icon__container'>
 							<img className="feedback--icon"src={wow} alt='wow face' />
 						</div>
