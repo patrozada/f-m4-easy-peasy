@@ -43,16 +43,9 @@ class App extends React.Component {
 			{
 				method: 'POST'
 			}
-<<<<<<< HEAD
 		).catch(error => console.log(error));
 		this.updateGamesWithNewGame(gameID);
 		this.clearTextArea();
-=======
-		).then(() => {
-			this.updateGamesWithNewGame();
-			this.clearTextArea();
-		}).catch(error => console.log(error));
->>>>>>> 17dc0a45d8959357c7b24520442e19e4b048578e
 	};
 
 	clearTextArea() {
@@ -75,7 +68,6 @@ class App extends React.Component {
 		return updatedGame;
 	}
 
-<<<<<<< HEAD
 	updateGamesWithNewGame(gameID){
 		const updatedGame = this.insertCommentInGame(gameID);
 		console.log(updatedGame);
@@ -83,12 +75,6 @@ class App extends React.Component {
 		//find index of game 21
 		const gameIndex = this.state.games.findIndex(game => game.id === gameID);
 		console.log(gameIndex);
-=======
-	updateGamesWithNewGame(){
-		const updatedGame = this.insertCommentInGame();
-		
-		const gameIndex = this.state.games.findIndex(game => game.id === 21);
->>>>>>> 17dc0a45d8959357c7b24520442e19e4b048578e
 		
 		const newGames = [...this.state.games];
 		newGames[gameIndex] = updatedGame;
