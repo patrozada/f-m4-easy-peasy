@@ -20,10 +20,12 @@ class ShareIdea extends React.Component {
             className="shareIdea--input"
           />
           <Button 
-          type="button" 
-          onClick={this.props.handleButtonClick} variant="success" 
+          type="button"
+          variant="light"
+          onClick={this.props.handleButtonClick} 
           style={{
             backgroundColor:'#7db238',
+            color: 'white',
             fontFamily:"'Lato', sans-serif",
             textTransform:'uppercase',
             fontSize:'12px',
