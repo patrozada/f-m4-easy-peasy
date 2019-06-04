@@ -8,13 +8,10 @@
 body {
   margin: 0 auto;
   min-height: 100vh;
-  background-color: $background-color;
+  background-color: $background-color__nav-bar;
 }
 
 .general-container {
   max-width: 600px;
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+
