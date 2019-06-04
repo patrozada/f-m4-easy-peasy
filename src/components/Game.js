@@ -7,6 +7,7 @@ import MoreGames from "./MoreGames";
 import { Link } from "react-router-dom";
 import Progress from "./Progress";
 import Button from "react-bootstrap/Button";
+import Loading from "../images/Eclipse-1.5s-170px.gif"
 
 class Game extends React.Component {
   render() {
@@ -14,7 +15,7 @@ class Game extends React.Component {
     const { id } = this.props.match.params;
     const selectedGame = games.find(game => game.id === parseInt(id));
     return selectedGame === undefined ? (
-      <p>Loading...</p>
+		<img src={Loading} alt="loading" className="loading"/> 
     ) : (
       <React.Fragment>
         <div>

@@ -6,6 +6,7 @@ import logo from './../images/201-logo.svg';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import Loading from "../images/Eclipse-1.5s-170px.gif"
 
 class Home extends React.Component {
   render() {
@@ -17,8 +18,7 @@ class Home extends React.Component {
       slidesToScroll: 1
     };
     const initialGame = this.props.games.find(game => parseInt(game.id) === 21);
-    console.log(initialGame);
-    return initialGame === undefined ? <p>Loading...</p> :(
+    return initialGame === undefined ? <img src={Loading} alt="loading" className="loading"/> :(
       <React.Fragment>
         <NavigationBar />
         <section className="header__image-section">
