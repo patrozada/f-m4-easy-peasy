@@ -1,6 +1,5 @@
-
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
 
 @import 'styles/variables';
 @import 'styles/main';
@@ -9,5 +8,5 @@
 @import 'styles/feedback';
 @import 'styles/carousel';
 @import 'styles/nextGame';
-@import 'components/header.scss';
-
+@import 'styles/header';
+@import 'styles/progress';

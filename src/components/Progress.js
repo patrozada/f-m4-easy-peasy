@@ -21,34 +21,36 @@ class Progress extends React.Component {
 				</p>
 				<div className="progress--subtitle__container">
 					<div>
-						<p>Physical</p>
-						<p>Level 1</p>
+						<p className="progress--subtitle__apptitudes">Physical</p>
+						<p className="progress--subtitle__level">Level 1</p>
 					</div>
-					ç
 					<div className="progress--bars__container">
 						<ProgressBar
+							className="progress--bar"
 							variant="success"
 							now={this.randomNrProgress(1, 100)}
 						/>
 						<img src={PhisicalIcon} alt="Phisical-Icon" />
 					</div>
 					<div className="progress--subtitle__container">
-						<p>Communication</p>
-						<p>Level 1</p>
+						<p className="progress--subtitle__apptitudes">Communication</p>
+						<p className="progress--subtitle__level">Level 1</p>
 					</div>
 					<div className="progress--bars__container">
 						<ProgressBar
+							className="progress--bar"
 							variant="success"
 							now={this.randomNrProgress(1, 100)}
 						/>
 						<img src={CommunicationIcon} alt="Communication-Icon" />
 					</div>
 					<div className="progress--subtitle__container">
-						<p>World</p>
-						<p>Level 1</p>
+						<p className="progress--subtitle__apptitudes">World</p>
+						<p className="progress--subtitle__level">Level 1</p>
 					</div>
 					<div className="progress--bars__container">
 						<ProgressBar
+							className="progress--bar"
 							variant="success"
 							now={this.randomNrProgress(1, 100)}
 						/>

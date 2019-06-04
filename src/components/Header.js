@@ -1,7 +1,6 @@
 import React from 'react';
 import imgPlay from '../images/play-white@1x.png';
 import imgSettings from '../images/settings-default.png';
-import './header.scss';
 
 class Header extends React.Component {
 	render() {
