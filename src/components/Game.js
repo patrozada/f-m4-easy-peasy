@@ -11,36 +11,34 @@ import Button from 'react-bootstrap/Button';
 class Game extends React.Component {
 	render() {
 		const { games } = this.props;
-		return (
+		const { id } = this.props.match.params;
+		const selectedGame = games
+		.find(game => game.id === parseInt(id))
+		console.log('selectedGame', selectedGame)
+		return selectedGame === undefined ? <p>Loading...</p> : (
 			<React.Fragment>
-				{games
-					.filter(game => game.id === 21)
-					.map(game => {
-						return (
-							<div>
-								<Header game={game} />
-								<Carousel game={game} />
-								<div className="button__positionning--wrapper">
-									<Link game={game}className="button__game-wrapper" to={`/game/${game.id}/comment`}>
-										<Button 
-											style={{backgroundColor: '#628a2c', 
-															border: '1px solid #628a2c',
-															fontFamily: "'Lato', sans-serif",
-															fontSize: '12px',
-															textTransform: 'uppercase'
-														}}
-											game={game}
-										>Share your comments</Button>
-									</Link>
-								</div>
-								<Comments game={game} />
-								<Progress />
-								<Feedback game={game} />
-								<MoreGames games={games} bgc="selected-game" />
-								<MoreGames games={games} bgc="ordinary-game" />
-							</div>
-						);
-					})}
+				<div>
+					<Header game={selectedGame} />
+					<Carousel game={selectedGame} />
+					<div className="button__positionning--wrapper">
+						<Link game={selectedGame}className="button__game-wrapper" to={`/game/${selectedGame.id}/comment`}>
+							<Button 
+								style={{backgroundColor: '#628a2c', 
+												border: '1px solid #628a2c',
+												fontFamily: "'Lato', sans-serif",
+												fontSize: '12px',
+												textTransform: 'uppercase'
+											}}
+								game={selectedGame}
+							>Share your comments</Button>
+						</Link>
+					</div>
+					<Comments game={selectedGame} />
+					<Progress />
+					<Feedback game={selectedGame} />
+					<MoreGames games={games} bgc="selected-game" />
+					<MoreGames games={games} bgc="ordinary-game" />
+				</div>
 			</React.Fragment>
 		);
 	}

@@ -98,17 +98,21 @@ class App extends React.Component {
 			<div className="general-container">
 				<Switch>
 					<Route exact path="/" render={routerProps => (
-						<Home />
+						<Home games={games} />
 					)}/>
 					)}/>	
-					<Route exact path="/game/:id" render={routerProps => (
-						<Game 
-						games={games}
-						value={value}
-						handleTextArea={this.handleTextArea}
-						handleButtonClick={this.handleButtonClick}
-						clearTextArea={this.clearTextArea} />
-					)}/>
+					<Route 
+						exact path="/game/:id" 
+						render = {routerProps => (
+							<Game 
+							match={routerProps.match}
+							games={games}
+							value={value}
+							handleTextArea={this.handleTextArea}
+							handleButtonClick={this.handleButtonClick}
+							clearTextArea={this.clearTextArea} />
+						)}
+					/>
 					<Route exact path="/game/:id/comment" render={routerProps => (
 						<ShareIdea
 							value={this.state.value}
