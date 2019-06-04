@@ -1,0 +1,40 @@
+.progress {
+	&--section {
+		display: flex;
+	}
+
+	&--bars__container {
+		width: 263px;
+	}
+
+	&--progress--bar {
+		width: 263px;
+	}
+
+	&--title {
+		font-family: $font__general;
+		text-align: center;
+		font-size: $font__section-title-size;
+		font-weight: bold;
+		margin-top: 15px;
+	}
+
+	&--subtitle__container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&--subtitle__apptitudes {
+		text-transform: uppercase;
+		color: $font__general-color;
+		font-size: $font__general-size;
+		font-family: $font__general;
+		font-weight: bold;
+	}
+
+	&--subtitle__level {
+		font-size: $font__general-size;
+		font-family: $font__general;
+		color: $green__primary-color;
+	}
+}
