@@ -6,9 +6,19 @@ import happy from "../images/happy.svg";
 import wow from "../images/wow.svg";
 
 class Feedback extends React.Component {
+	constructor(props){
+		super(props)
+		this.state = {
+			clicked : false,
+		}
+		this.handleFeedbackClick = this.handleFeedbackClick.bind(this);
+	}
+	
 	handleFeedback = e => {
 		const { value } = e.target;
-
+		this.setState({
+			clicked:true
+		})
 		fetch(ENDPOINT_FEEDBACK, {
 			method: "POST",
 			body: JSON.stringify({
@@ -23,13 +33,21 @@ class Feedback extends React.Component {
 			.then(response => console.log("Success:", response));
 	};
 
+	handleFeedbackClick () {
+		const clicked = this.state.clicked;
+		const showBarClass = clicked ? 'hidden' : '';
+		return showBarClass;
+	}
 	render() {
+		const showBarClass = this.handleFeedbackClick();
 		return (
-			<section className='feedback--container'>
+			<section className={`feedback--container ${showBarClass}`}>
+			
 				<p className='feedback--title'>How did it go?</p>
 				<form
 					className='feedback--input__container'
 					onChange={this.handleFeedback}
+					onClick={this.handleFeedbackClick} 
 					action='POST'>
 					<label htmlFor='1'>
 						<input className="feedback--radio-button" type='radio' value={1} name='feedback' id='1' />
