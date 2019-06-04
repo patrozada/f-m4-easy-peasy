@@ -1,40 +1,13 @@
 import React from 'react';
 import imgPlay from '../images/play-white@1x.png';
-import imgSettings from '../images/settings-default.png';
+import NavigationBar from './NavigationBar';
 
 class Header extends React.Component {
 	render() {
 		const { game } = this.props;
 		return (
 			<header>
-				<section className="header__nav">
-					<nav>
-						<ul className="header__nav-list">
-							<li>
-								<a className="header__nav-list-link" href="#">
-									Games
-								</a>
-							</li>
-							<li>
-								<a className="header__nav-list-link" href="#">
-									Progress
-								</a>
-							</li>
-							<li>
-								<a className="header__nav-list-link" href="#">
-									Awards
-								</a>
-							</li>
-							<li>
-								<img
-									className="header__nav-settingsImage-elem"
-									src={imgSettings}
-									alt="image-settings"
-								/>
-							</li>
-						</ul>
-					</nav>
-				</section>
+				<NavigationBar />
 
 				<section className="header__title--wrapper">
 					<h1 className="header__title">{game.name}</h1>
