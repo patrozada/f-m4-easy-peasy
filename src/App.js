@@ -44,9 +44,10 @@ class App extends React.Component {
 			{
 				method: 'POST'
 			}
-		).catch(error => console.log(error));
-		this.updateGamesWithNewGame();
-		this.clearTextArea();
+		).then(() => {
+			this.updateGamesWithNewGame();
+			this.clearTextArea();
+		}).catch(error => console.log(error));
 	};
 
 	clearTextArea() {
@@ -62,14 +63,8 @@ class App extends React.Component {
 		const game = this.state.games
 		.find(game => game.id === 21)
 
-		console.log(game.comments);
-		
-
 		const newComments = [...game.comments];
 		newComments.push(comment)
-
-		console.log(newComments);
-		
 
 		const updatedGame = {...game, comments: newComments}
 		return updatedGame;
@@ -77,16 +72,11 @@ class App extends React.Component {
 
 	updateGamesWithNewGame(){
 		const updatedGame = this.insertCommentInGame();
-		console.log(updatedGame);
 		
-		//find index of game 21
 		const gameIndex = this.state.games.findIndex(game => game.id === 21);
-		console.log(gameIndex);
 		
-		//replace game with updated game
 		const newGames = [...this.state.games];
 		newGames[gameIndex] = updatedGame;
-		console.log(newGames);
 		
 		this.setState({ 
 				games: newGames,
