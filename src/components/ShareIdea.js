@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import {Link} from 'react-router-dom';
 import ShareIdeaImage from './../images/103-onboarding@1x.png';
 import Arrow from './../images/chevron-green@1x.png';
+import PropTypes from 'prop-types';
 
 class ShareIdea extends React.Component {
   render() {
@@ -45,5 +46,12 @@ class ShareIdea extends React.Component {
     );
   }
 }
+
+ShareIdea.propTypes = {
+  match: PropTypes.object,
+  value: PropTypes.string,
+  handleTextArea: PropTypes.func,
+  handleButtonClick: PropTypes.func,
+};
 
 export default ShareIdea;

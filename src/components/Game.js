@@ -7,6 +7,7 @@ import MoreGames from './MoreGames';
 import { Link } from 'react-router-dom';
 import Progress from './Progress';
 import Button from 'react-bootstrap/Button';
+import PropTypes from 'prop-types';
 
 class Game extends React.Component {
 	render() {
@@ -42,5 +43,10 @@ class Game extends React.Component {
 		);
 	}
 }
+
+Game.propTypes = {
+	games: PropTypes.arrayOf(PropTypes.object),
+	match: PropTypes.object,
+  };
 
 export default Game;

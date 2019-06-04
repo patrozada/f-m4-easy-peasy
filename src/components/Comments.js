@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 class Comments extends React.Component {
   render() {
@@ -14,5 +15,9 @@ class Comments extends React.Component {
     );
   }
 }
+
+Comments.propTypes = {
+  game: PropTypes.object,
+};
 
 export default Comments;

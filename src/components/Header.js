@@ -1,6 +1,7 @@
 import React from 'react';
 import imgPlay from '../images/play-white@1x.png';
 import NavigationBar from './NavigationBar';
+import PropTypes from 'prop-types';
 
 class Header extends React.Component {
 	render() {
@@ -31,4 +32,9 @@ class Header extends React.Component {
 		);
 	}
 }
+
+Header.propTypes = {
+	game: PropTypes.object,
+  };
+
 export default Header;

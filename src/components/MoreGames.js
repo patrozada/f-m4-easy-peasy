@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class MoreGames extends React.Component{
   render(){
@@ -17,5 +18,10 @@ class MoreGames extends React.Component{
     )
   }
 }
+
+MoreGames.propTypes = {
+  games: PropTypes.arrayOf(PropTypes.object),
+  bgc: PropTypes.string,
+};
 
 export default MoreGames;

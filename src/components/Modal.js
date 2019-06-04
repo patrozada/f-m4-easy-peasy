@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function  Modal (props){
   const {handleClose, show} = props;
@@ -17,6 +18,11 @@ function  Modal (props){
       </section>
     </div>
   );
+};
+
+Modal.propTypes = {
+  show: PropTypes.bool,
+  handleClose: PropTypes.func,
 };
 
 export default Modal;

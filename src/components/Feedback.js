@@ -5,6 +5,7 @@ import sad from "../images/sad.svg";
 import neutral from "../images/neutral.svg";
 import happy from "../images/happy.svg";
 import wow from "../images/wow.svg";
+import PropTypes from 'prop-types';
 
 class Feedback extends React.Component {
 	constructor(props) {
@@ -115,4 +116,8 @@ class Feedback extends React.Component {
 	}
 }
 
+Feedback.propTypes = {
+	game: PropTypes.object,
+  };
+  
 export default Feedback;
