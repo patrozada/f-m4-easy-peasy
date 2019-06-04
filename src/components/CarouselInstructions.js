@@ -7,7 +7,7 @@ class CarouselInstructions extends React.Component{
       instructions,
     } = this.props.game;
     return(
-      <div>
+      <div className="carousel-card__instructions">
         {ReactHtmlParser(instructions)}
       </div>
     )
