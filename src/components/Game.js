@@ -1,11 +1,12 @@
-import React from "react";
-import Header from "./Header";
-import Button from "./Button";
-import Carousel from "./Carousel"
-import Comments from "./Comments";
-import Feedback from "./Feedback";
-import MoreGames from "./MoreGames";
+import React from 'react';
+import Header from './Header';
+import Button from './Button';
+import Carousel from './Carousel';
+import Comments from './Comments';
+import Feedback from './Feedback';
+import MoreGames from './MoreGames';
 import { Link } from 'react-router-dom';
+import Progress from './Progress';
 
 class Game extends React.Component {
 	render() {
@@ -15,19 +16,24 @@ class Game extends React.Component {
 				{games
 					.filter(game => game.id === 21)
 					.map(game => {
-						return <div>
-							<Header game={game} />
-							<Carousel game={game}/>
-							<Link to={`/game/${game.id}/comment`}>
-								<Button 
-									gameID={game.id}
-									handleButtonClick={this.props.handleButtonClick}/>
-							</Link>
-							<Comments game={game} />
-							<Feedback game={game} />
-							<MoreGames games={games} bgc="selected-game"/>
-							<MoreGames games={games} bgc="ordinary-game"/>
-						</div>})}
+						return (
+							<div>
+								<Header game={game} />
+								<Carousel game={game} />
+								<Link to={`/game/${game.id}/comment`}>
+									<Button
+										gameID={game.id}
+										handleButtonClick={this.props.handleButtonClick}
+									/>
+								</Link>
+								<Comments game={game} />
+								<Progress />
+								<Feedback game={game} />
+								<MoreGames games={games} bgc="selected-game" />
+								<MoreGames games={games} bgc="ordinary-game" />
+							</div>
+						);
+					})}
 			</React.Fragment>
 		);
 	}
