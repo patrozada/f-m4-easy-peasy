@@ -11,25 +11,25 @@ class Header extends React.Component {
 					<nav>
 						<ul className="header__nav-list">
 							<li>
-								<a className="header__nav-list-link" href="#">
+								<p className="header__nav-list-link" href="#">
 									Games
-								</a>
+								</p>
 							</li>
 							<li>
-								<a className="header__nav-list-link" href="#">
+								<p className="header__nav-list-link" href="#">
 									Progress
-								</a>
+								</p>
 							</li>
 							<li>
-								<a className="header__nav-list-link" href="#">
+								<p className="header__nav-list-link" href="#">
 									Awards
-								</a>
+								</p>
 							</li>
 							<li>
 								<img
 									className="header__nav-settingsImage-elem"
 									src={imgSettings}
-									alt="image-settings"
+									alt="settings"
 								/>
 							</li>
 						</ul>
@@ -47,11 +47,7 @@ class Header extends React.Component {
 					/>
 					<div className="header__image-play-container">
 						{' '}
-						<img
-							className="header__image-play"
-							src={imgPlay}
-							alt="image-play"
-						/>
+						<img className="header__image-play" src={imgPlay} alt="play" />
 					</div>
 				</section>
 			</header>
