@@ -36,16 +36,16 @@ class App extends React.Component {
 		});
 	}
 
-	handleButtonClick = () => {
+	handleButtonClick = (e, gameID) => {
+		console.log('handleButtonClick', e, gameID)
 		fetch(
-			`${ENDPOINT}?body=${this.state.value}&game_id=${21}&parent_id=6281`,
+			`${ENDPOINT}?body=${this.state.value}&game_id=${gameID}&parent_id=6281`,
 			{
 				method: 'POST'
 			}
-		).then(() => {
-			this.updateGamesWithNewGame();
-			this.clearTextArea();
-		}).catch(error => console.log(error));
+		).catch(error => console.log(error));
+		this.updateGamesWithNewGame(gameID);
+		this.clearTextArea();
 	};
 
 	clearTextArea() {
@@ -54,12 +54,12 @@ class App extends React.Component {
 			});
 	}
 
-	insertCommentInGame(){
+	insertCommentInGame(gameID){
 		const comment = {
 			body: this.state.value,
 		}
 		const game = this.state.games
-		.find(game => game.id === 21)
+		.find(game => parseInt(game.id) === parseInt(gameID))
 
 		const newComments = [...game.comments];
 		newComments.push(comment)
@@ -68,10 +68,13 @@ class App extends React.Component {
 		return updatedGame;
 	}
 
-	updateGamesWithNewGame(){
-		const updatedGame = this.insertCommentInGame();
+	updateGamesWithNewGame(gameID){
+		const updatedGame = this.insertCommentInGame(gameID);
+		console.log(updatedGame);
 		
-		const gameIndex = this.state.games.findIndex(game => game.id === 21);
+		//find index of game 21
+		const gameIndex = this.state.games.findIndex(game => game.id === gameID);
+		console.log(gameIndex);
 		
 		const newGames = [...this.state.games];
 		newGames[gameIndex] = updatedGame;
@@ -86,19 +89,24 @@ class App extends React.Component {
 			<div className="general-container">
 				<Switch>
 					<Route exact path="/" render={routerProps => (
-						<Home />
+						<Home games={games} />
 					)}/>
 					)}/>	
-					<Route exact path="/game/:id" render={routerProps => (
-						<Game 
-						games={games}
-						value={value}
-						handleTextArea={this.handleTextArea}
-						handleButtonClick={this.handleButtonClick}
-						clearTextArea={this.clearTextArea} />
-					)}/>
+					<Route 
+						exact path="/game/:id" 
+						render = {routerProps => (
+							<Game 
+							match={routerProps.match}
+							games={games}
+							value={value}
+							handleTextArea={this.handleTextArea}
+							handleButtonClick={this.handleButtonClick}
+							clearTextArea={this.clearTextArea} />
+						)}
+					/>
 					<Route exact path="/game/:id/comment" render={routerProps => (
 						<ShareIdea
+							match={routerProps.match}
 							value={this.state.value}
 							handleTextArea={this.handleTextArea}
 							handleButtonClick={this.handleButtonClick}

@@ -1,4 +1,3 @@
-@import './variables';
 .header__nav-list {
 	list-style: none;
 	margin: 0;
@@ -46,6 +45,7 @@
 
 .header__image-section {
 	position: relative;
+	margin-bottom: 40px;
 }
 
 .header__image-play-container {

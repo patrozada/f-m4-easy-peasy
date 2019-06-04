@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
+const Home = (props) => {
   return (
-    <Link to="/game/21"><button>Go to Opposites Game</button></Link>
+    props.games.map(game => 
+      <Link to={`/game/${game.id}`}><button>Go to {game.name}</button></Link>
+    )
   );
 }
  
