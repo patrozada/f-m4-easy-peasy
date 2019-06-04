@@ -10,7 +10,7 @@ class Progress extends React.Component {
 	};
 	render() {
 		return (
-			<section>
+			<section className="progress-container">
 				<p className="progress-title">
 					How the game helps your child’s progress
 				</p>
