@@ -2,22 +2,30 @@
   &--container{
     width: 100%;
     display: flex;
+    align-items: center;
     background-color: $green__primary-color;
-    height: 50px;
-    padding: 5px 38px;
+    height: 60px;
+   
   }
   &--title{
     color: $text-color__ligth;
     text-transform: uppercase;
     font-family: $font__general;
     font-size: $font__general-size;
+    margin:0;
+    padding-top: 5px;
+    padding-left: 30px;
     height: 100%;
-    width:30%;
+    width:25%;
   }
   &--input__container{
-    width:70%;
+    width:75%;
     display: flex;
     align-items: center;
+    padding-right: 30px;
+    label{
+      margin: 0;
+    }
   }
   &--icon__container{
     height: 45px;

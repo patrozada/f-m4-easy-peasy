@@ -1,14 +1,13 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import ShareIdea from "./components/ShareIdea";
+import { fetchGetComments } from './services/fetchGetComments';
 import { ENDPOINT } from "./services/fetchPostComments";
 
-import './App.scss';
+import ShareIdea from "./components/ShareIdea";
 import Game from './components/Game';
 import Home from './components/Home';
 
-
-import { fetchGetComments } from './services/fetchGetComments';
+import './App.scss';
 
 class App extends React.Component {
 	constructor(props) {
@@ -37,12 +36,12 @@ class App extends React.Component {
 
 	handleButtonClick = () => {
 		fetch(
-			`${ENDPOINT}?body=${this.props.value}&game_id=${21}&parent_id=6281`,
+			`${ENDPOINT}?body=${this.state.value}&game_id=${21}&parent_id=6281`,
 			{
 				method: 'POST'
 			}
 		).catch(error => console.log(error));
-		this.props.clearTextArea();
+		this.clearTextArea();
 	};
 
 	clearTextArea() {
@@ -57,7 +56,7 @@ class App extends React.Component {
 	render() {
 		const { value, games } = this.state;
 		return (
-			<React.Fragment>
+			<div className="general-container">
 				<Switch>
 					<Route exact path="/" render={routerProps => (
 						<Home />
@@ -68,6 +67,7 @@ class App extends React.Component {
 						games={games}
 						value={value}
 						handleTextArea={this.handleTextArea}
+						handleButtonClick={this.handleButtonClick}
 						clearTextArea={this.clearTextArea} />
 					)}/>
 					<Route exact path="/game/:id/comment" render={routerProps => (
@@ -78,7 +78,7 @@ class App extends React.Component {
 						/>
 					)}/>
 				</Switch>
-			</React.Fragment>
+			</div>
 		);
 	}
 }

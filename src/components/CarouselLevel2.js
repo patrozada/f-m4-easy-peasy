@@ -7,8 +7,9 @@ class CarouselLevel2 extends React.Component{
       level_2,
     } = this.props.game;
     return(
-      <div>
-        <img src="https://via.placeholder.com/150" alt="level 2"/>
+      <div className="carousel-card__level">
+        <h2 className="carousel-card__level--title">Level 2</h2>
+        <img className="carousel-card__level--image" src="https://via.placeholder.com/150" alt="level 2"/>
         {ReactHtmlParser(level_2)}
       </div>
     )
