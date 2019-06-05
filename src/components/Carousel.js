@@ -17,7 +17,7 @@ class Carousel extends React.Component {
     return (
       <Slider {...settings}>
         <div>
-          <Card>
+          <Card className="carousel-card">
             <Card.Body>
               <CarouselInstructions game = {this.props.game}/>
             </Card.Body>

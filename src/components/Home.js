@@ -18,7 +18,11 @@ class Home extends React.Component {
       slidesToScroll: 1
     };
     const initialGame = this.props.games.find(game => parseInt(game.id) === 21);
+<<<<<<< HEAD
     return initialGame === undefined ? <img src={Loading} alt="loading" className="loading"/> :(
+=======
+    return initialGame === undefined ? <p>Loading...</p> :(
+>>>>>>> 83a925231e44de2ce2ab57a3925d6bc0916f1801
       <React.Fragment>
         <NavigationBar />
         <section className="header__image-section">
@@ -39,19 +43,21 @@ class Home extends React.Component {
               <Card.Text>
                 {initialGame.description}
               </Card.Text>
-              <Button style={{
+              <Link to={`/game/${21}`}>
+                <Button style={{
                   backgroundColor: '#ffffff',
                   color: '#EB4C54',
                   border: '1px solid #EB4C54'
                 }}>Play new game</Button>
+              </Link>
             </Card.Body>
           </Card>
         </div>
-        <div>
+        <div className="carousel__landing-section">
           <Slider {...settings}>
-              {this.props.games.map(game => 
-                <div className="carousel-card__wrapper">
-                  <Card>
+              {this.props.games.map((game, index) => 
+                <div key={index} className="carousel-card__landing-wrapper">
+                  <Card className="carousel-card__landing">
                     <Card.Img variant="top" src={game.image_url} />
                     <Card.Body>
                       <Card.Title>{game.name}</Card.Title>
