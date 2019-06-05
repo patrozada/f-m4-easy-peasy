@@ -14,7 +14,6 @@ class Game extends React.Component {
 		const { id } = this.props.match.params;
 		const selectedGame = games
 		.find(game => game.id === parseInt(id))
-		console.log('selectedGame', selectedGame)
 		return selectedGame === undefined ? <p>Loading...</p> : (
 			<React.Fragment>
 				<div>

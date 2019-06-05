@@ -42,15 +42,15 @@ class App extends React.Component {
 	}
 
 	handleButtonClick = (e, gameID) => {
-		console.log('handleButtonClick', e, gameID)
 		fetch(
 			`${ENDPOINT}?body=${this.state.value}&game_id=${gameID}&parent_id=6281`,
 			{
 				method: 'POST'
 			}
-		).catch(error => console.log(error));
-		this.updateGamesWithNewGame(gameID);
-		this.clearTextArea();
+		).then(()=>{
+			this.updateGamesWithNewGame(gameID);
+			this.clearTextArea();
+		}).catch(error => console.log(error));
 	};
 
 	clearTextArea() {
@@ -75,15 +75,12 @@ class App extends React.Component {
 
 	updateGamesWithNewGame(gameID){
 		const updatedGame = this.insertCommentInGame(gameID);
-		console.log(updatedGame);
 		
-		//find index of game 21
-		const gameIndex = this.state.games.findIndex(game => game.id === gameID);
-		console.log(gameIndex);
+		const gameIndex = this.state.games.findIndex(game => parseInt(game.id) === parseInt(gameID));
 		
 		const newGames = [...this.state.games];
 		newGames[gameIndex] = updatedGame;
-		
+	
 		this.setState({ 
 				games: newGames,
 			});	
