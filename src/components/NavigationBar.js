@@ -19,6 +19,8 @@ const NavigationBar = () => {
 					<li>
 						<a
 							className="header__nav-list-link"
+							target="_blank"
+							rel="noopener noreferrer"
 							href="https://easypeasyapp.com/impact/"
 						>
 							Awards
