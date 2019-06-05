@@ -8,17 +8,17 @@ const NavigationBar = () => {
 					<nav>
 						<ul className="header__nav-list">
 							<li>
-								<a className="header__nav-list-link" href="#">
+								<a className="header__nav-list-link" href="/home">
 									Games
 								</a>
 							</li>
 							<li>
-								<a className="header__nav-list-link" href="#">
+								<a className="header__nav-list-link" href="/">
 									Progress
 								</a>
 							</li>
 							<li>
-								<a className="header__nav-list-link" href="#">
+								<a className="header__nav-list-link" href="/">
 									Awards
 								</a>
 							</li>

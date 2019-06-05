@@ -92,33 +92,33 @@ class App extends React.Component {
 		return (
 			<div className="general-container">
 				<BrowserRouter>
-					<Switch>
-						<Route exact path="/" render={routerProps => (
-							<Home games={games} />
-						)}/>
-						)}/>	
-						<Route 
-							exact path="/game/:id" 
-							render = {routerProps => (
-								<Game 
-								match={routerProps.match}
-								games={games}
-								value={value}
-								handleTextArea={this.handleTextArea}
-								handleButtonClick={this.handleButtonClick}
-								clearTextArea={this.clearTextArea} />
-							)}
+				<Switch>
+					<Route exact path="/" render={routerProps => (
+						<Home games={games} />
+					)}/>
+					)}/>	
+					<Route 
+						exact path="/game/:id" 
+						render = {routerProps => (
+							<Game 
+							match={routerProps.match}
+							games={games}
+							value={value}
+							handleTextArea={this.handleTextArea}
+							handleButtonClick={this.handleButtonClick}
+							clearTextArea={this.clearTextArea} />
+						)}
+					/>
+					<Route exact path="/game/:id/comment" render={routerProps => (
+						<ShareIdea
+							match={routerProps.match}
+							value={this.state.value}
+							handleTextArea={this.handleTextArea}
+							handleButtonClick={this.handleButtonClick}
 						/>
-						<Route exact path="/game/:id/comment" render={routerProps => (
-							<ShareIdea
-								match={routerProps.match}
-								value={this.state.value}
-								handleTextArea={this.handleTextArea}
-								handleButtonClick={this.handleButtonClick}
-							/>
-						)}/>
-					</Switch>
-				</BrowserRouter>
+					)}/>
+				</Switch>
+				</BrowserRouter>	
 			</div>
 		);
 	}
