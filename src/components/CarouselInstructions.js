@@ -2,7 +2,6 @@ import React from 'react';
 import ReactHtmlParser from 'react-html-parser';
 import PropTypes from 'prop-types';
 
-
 class CarouselInstructions extends React.Component{
   render(){
     const {
@@ -15,7 +14,9 @@ class CarouselInstructions extends React.Component{
     )
   }
 }
+
 CarouselInstructions.propTypes = {
   game: PropTypes.object,
 };
+
 export default CarouselInstructions;

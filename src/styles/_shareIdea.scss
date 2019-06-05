@@ -1,4 +1,4 @@
-.shareIdea--container{
+.shareIdea--container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -8,17 +8,20 @@
     min-height: 100vh;
     font-family: $font__general;
 }
-.shareIdea--nav{
+
+.shareIdea--nav {
     width: 100vw;
     background-color: rgb(237,245,227);
     height: 36px;
     top:0;
 }
-.shareIdea--container__nav{
+
+.shareIdea--container__nav {
     max-width: 600px;
     margin: 0 auto;
 }
-.shareIdea--button__back{
+
+.shareIdea--button__back {
     background-color: transparent;
     border: none;
     color: #7db238;
@@ -26,30 +29,35 @@
     text-transform: uppercase;
     margin-left: 20px;
 }
-.shareIdea--button__image{
+.shareIdea--button__image {
     height: 8px;
     padding-right: 5px;
     margin-bottom: 1px;
 }
-.shareIdea--input__container{
+
+.shareIdea--input__container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     max-width: 600px;
 }
-.shareIdea--image{
+
+.shareIdea--image {
     height: 150px;
     margin-bottom: 20px;
 }
-.shareIdea--title{
+
+.shareIdea--title {
     font-weight: bold;
 }
-.shareIdea--subtitle{
+
+.shareIdea--subtitle {
     text-transform: uppercase;
     font-size: 10px;
 }
-.shareIdea--input{
+
+.shareIdea--input {
     border-radius: 5px;
     border: 1px solid white;
     max-width: 600px;
@@ -57,7 +65,7 @@
     width: 300px;
 }
 
-.shareIdea--button__share{
+.shareIdea--button__share {
     width: 80%;
     height: 40px;
     text-transform: capitalize;

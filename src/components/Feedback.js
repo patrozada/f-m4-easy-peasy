@@ -1,11 +1,11 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { ENDPOINT_FEEDBACK } from "./../services/fetchPostFeedback";
 import Modal from "./Modal";
 import sad from "../images/sad.svg";
 import neutral from "../images/neutral.svg";
 import happy from "../images/happy.svg";
 import wow from "../images/wow.svg";
-import PropTypes from 'prop-types';
 
 class Feedback extends React.Component {
 	constructor(props) {
@@ -20,12 +20,14 @@ class Feedback extends React.Component {
 	hideModal = () => {
 		this.setState({ show: false });
 	};
+
 	handleFeedback = e => {
 		const { value } = e.target;
 		this.setState({
 			clicked: true,
 			show : true
 		});
+
 		fetch(ENDPOINT_FEEDBACK, {
 			method: "POST",
 			body: JSON.stringify({
@@ -44,7 +46,8 @@ class Feedback extends React.Component {
 		const clicked = this.state.clicked;
 		const showBarClass = clicked ? "hidden" : "";
 		return showBarClass;
-	}
+	};
+
 	render() {
 		const showBarClass = this.handleFeedbackClick();
 		return (
@@ -118,6 +121,6 @@ class Feedback extends React.Component {
 
 Feedback.propTypes = {
 	game: PropTypes.object,
-  };
+};
   
 export default Feedback;

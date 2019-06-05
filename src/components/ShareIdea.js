@@ -1,9 +1,9 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 import ShareIdeaImage from './../images/103-onboarding@1x.png';
 import Arrow from './../images/chevron-green@1x.png';
-import PropTypes from 'prop-types';
 
 class ShareIdea extends React.Component {
   render() {
@@ -40,7 +40,8 @@ class ShareIdea extends React.Component {
             textTransform:'uppercase',
             fontSize:'12px',
             border:'1px solid #7db238'
-            }}className="shareIdea--button__share">Add your comment</Button>
+            }}className="shareIdea--button__share">Add your comment
+          </Button>
         </form>
       </div>
     );

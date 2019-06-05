@@ -18,7 +18,6 @@ class ProgressComponent extends React.Component {
 						</p>
 						<p className="progress--subtitle__level">Level 1</p>
 					</div>
-
 					<ProgressBar
 						className="progress--bar"
 						variant="success"
@@ -35,6 +34,6 @@ ProgressComponent.propTypes = {
 	iconName: PropTypes.string,
 	functionProgress: PropTypes.number,
 	aptidude: PropTypes.string,
-  };
+};
 
 export default ProgressComponent;

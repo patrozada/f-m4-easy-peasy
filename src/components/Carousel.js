@@ -1,10 +1,10 @@
 import React from 'react';
 import Slider from "react-slick";
+import Card from 'react-bootstrap/Card';
+import PropTypes from 'prop-types';
 import CarouselInstructions from './CarouselInstructions';
 import CarouselLevel1 from './CarouselLevel1';
 import CarouselLevel2 from './CarouselLevel2';
-import Card from 'react-bootstrap/Card';
-import PropTypes from 'prop-types';
 
 class Carousel extends React.Component {
   render() {

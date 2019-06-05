@@ -1,10 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class MoreGames extends React.Component{
   render(){
     const randomGame = this.props.games[Math.floor(Math.random()*this.props.games.length)];
+
     return(
       <Link to={`/game/${randomGame.id}`}>
         <div className={`next-game__container ${this.props.bgc}`}>
@@ -13,8 +14,7 @@ class MoreGames extends React.Component{
             <h2 className="next-game__title">{randomGame.name}</h2>
             <p className="next-game__description">{randomGame.description}</p>
           </div>
-          <div className="next-game__image" style={{backgroundImage: `url(${randomGame.image_url})`}}>
-          </div>
+          <div className="next-game__image" style={{backgroundImage: `url(${randomGame.image_url})`}}></div>
         </div>
       </Link>
     )

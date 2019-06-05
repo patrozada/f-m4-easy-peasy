@@ -23,7 +23,8 @@
     justify-content: space-between;
     padding: 20px 0;
   }
-  &--image{
+
+  &--image {
     height: 30%;
     width:90%;
     background-image: url('./images/103-eyfs.svg');
@@ -31,15 +32,16 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  &--message{
+
+  &--message {
     color: $green__primary-color;
     text-transform: capitalize;
     text-align: center;
     line-height: $font__title-line-height;
     max-width: 200px;
-
   }
-  &--button{
+
+  &--button {
     width: 100px;
     height: 40px;
     border-radius: 5px;

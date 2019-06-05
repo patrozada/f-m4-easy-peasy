@@ -1,15 +1,14 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 import Header from "./Header";
 import Carousel from "./Carousel";
 import Comments from "./Comments";
+import Progress from "./Progress";
 import Feedback from "./Feedback";
 import MoreGames from "./MoreGames";
-import { Link } from "react-router-dom";
-import Progress from "./Progress";
-import Button from "react-bootstrap/Button";
 import Loading from "../images/Eclipse-1.5s-170px.gif"
-import PropTypes from 'prop-types';
-
 
 class Game extends React.Component {
   render() {
@@ -48,22 +47,21 @@ class Game extends React.Component {
           <Feedback game={selectedGame} />
           <MoreGames games={games} bgc="selected-game" />
           <MoreGames games={games} bgc="ordinary-game" />
-		  <div className="button__all-games--wrapper">
-          <Link to="/">
-			<Button
-			variant="outline-light"
-			className="button__all-games" 
-            style={{
+          <div className="button__all-games--wrapper">
+            <Link to="/">
+              <Button
+              variant="outline-light"
+              className="button__all-games" 
+              style={{
                 color: "#628a2c",
                 border: "1px solid #628a2c",
                 fontFamily: "'Lato', sans-serif",
                 fontSize: "12px",
-				textTransform: "uppercase",
-			  }}
-			  
-            >All games</Button>
-          </Link>
-		  </div>
+                textTransform: "uppercase",
+                }}  
+              >All games</Button>
+            </Link>
+          </div>
         </div>
       </React.Fragment>
     );
@@ -73,6 +71,6 @@ class Game extends React.Component {
 Game.propTypes = {
 	games: PropTypes.arrayOf(PropTypes.object),
 	match: PropTypes.object,
-  };
+};
 
 export default Game;
