@@ -1,5 +1,7 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import ReactDOM from 'react-dom';  
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { fetchGetComments } from './services/fetchGetComments';
 import { ENDPOINT } from "./services/fetchPostComments";
 
@@ -89,32 +91,34 @@ class App extends React.Component {
 		const { value, games } = this.state;
 		return (
 			<div className="general-container">
-				<Switch>
-					<Route exact path="/" render={routerProps => (
-						<Home games={games} />
-					)}/>
-					)}/>	
-					<Route 
-						exact path="/game/:id" 
-						render = {routerProps => (
-							<Game 
-							match={routerProps.match}
-							games={games}
-							value={value}
-							handleTextArea={this.handleTextArea}
-							handleButtonClick={this.handleButtonClick}
-							clearTextArea={this.clearTextArea} />
-						)}
-					/>
-					<Route exact path="/game/:id/comment" render={routerProps => (
-						<ShareIdea
-							match={routerProps.match}
-							value={this.state.value}
-							handleTextArea={this.handleTextArea}
-							handleButtonClick={this.handleButtonClick}
+				<BrowserRouter>
+					<Switch>
+						<Route exact path="/" render={routerProps => (
+							<Home games={games} />
+						)}/>
+						)}/>	
+						<Route 
+							exact path="/game/:id" 
+							render = {routerProps => (
+								<Game 
+								match={routerProps.match}
+								games={games}
+								value={value}
+								handleTextArea={this.handleTextArea}
+								handleButtonClick={this.handleButtonClick}
+								clearTextArea={this.clearTextArea} />
+							)}
 						/>
-					)}/>
-				</Switch>
+						<Route exact path="/game/:id/comment" render={routerProps => (
+							<ShareIdea
+								match={routerProps.match}
+								value={this.state.value}
+								handleTextArea={this.handleTextArea}
+								handleButtonClick={this.handleButtonClick}
+							/>
+						)}/>
+					</Switch>
+				</BrowserRouter>
 			</div>
 		);
 	}
