@@ -54,7 +54,7 @@ class Home extends React.Component {
             </Card.Body>
           </Card>
         </div>
-        <div>
+        <div className="carousel__landing-section">
           <Slider {...settings}>
               {this.props.games.map((game, index) => 
                 <div key={index} className="carousel-card__landing-wrapper">

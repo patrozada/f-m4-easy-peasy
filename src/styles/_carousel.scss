@@ -49,6 +49,7 @@
 
 .carousel-card__landing {
   @extend .carousel-card;
+  height: 350px;
   overflow: hidden;
 
   .card-body {
