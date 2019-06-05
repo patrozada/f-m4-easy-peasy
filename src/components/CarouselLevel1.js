@@ -1,6 +1,7 @@
 import React from 'react';
 import level1 from "../images/301-challenge1@1x.png";
 import ReactHtmlParser from 'react-html-parser';
+import PropTypes from 'prop-types';
 
 class CarouselLevel1 extends React.Component{
   render(){
@@ -16,4 +17,7 @@ class CarouselLevel1 extends React.Component{
     )
   }
 }
+CarouselLevel1.propTypes = {
+  game: PropTypes.object,
+};
 export default CarouselLevel1;
