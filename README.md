@@ -29,6 +29,24 @@ Here's a list of the dependencies that you will have installed whrn running npm 
       "slick-carousel": "^1.8.1"
     },
 
+Here are some samples of the user flow:
+
+1-Landing page:
+  Here parents can see the available games to play during that particular week:
+  ![landing page](./src/images/home-page.png)
+2-Game page:
+  When the user clicks on play new game button all details are shown:
+  ![game](./src/images/opposites-game.png)
+  Here there is a carousel we have imported from the library slick-carousel where the instructions of the game are displayed and suggestions to make it more challenging.
+  Below there is the button Share your idea, where the user can share comments with other parents in the following screen:
+  ![comment](./src/images/comment-window.png)
+  When the user sends her comment she will automatically be directed to the game page and her comment will be displayed in the comment section:
+  ![comment displayed](./src/images/comment-displayed.png)
+3-Finally the user can also send feedback to the app developpers using the mood buttons in the sticky bar.
+  ![feedback](./src/images/feedback-bar.png)
+  Once it is clicked the feedback is sent, the bar disappears and a modal is displayed so the user knows it worked:
+  ![modal](./src/images/modal.png)
+
 Initial Configuration
 Some projects require initial configuration (e.g. access tokens or keys, npm i). This is the section where you would document those requirements.
 
