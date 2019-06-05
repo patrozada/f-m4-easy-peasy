@@ -1,12 +1,12 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { fetchGetComments } from './services/fetchGetComments';
 import { ENDPOINT } from "./services/fetchPostComments";
 
 import ShareIdea from "./components/ShareIdea";
 import Game from './components/Game';
 import Home from './components/Home';
-
 import './App.scss';
 
 class App extends React.Component {
@@ -89,6 +89,7 @@ class App extends React.Component {
 		const { value, games } = this.state;
 		return (
 			<div className="general-container">
+				<BrowserRouter>
 				<Switch>
 					<Route exact path="/" render={routerProps => (
 						<Home games={games} />
@@ -115,6 +116,7 @@ class App extends React.Component {
 						/>
 					)}/>
 				</Switch>
+				</BrowserRouter>	
 			</div>
 		);
 	}

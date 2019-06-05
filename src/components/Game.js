@@ -11,10 +11,17 @@ import MoreGames from "./MoreGames";
 import Loading from "../images/Eclipse-1.5s-170px.gif"
 
 class Game extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+  componentDidUpdate(){
+    window.scrollTo(0,0)
+  }
   render() {
     const { games } = this.props;
     const { id } = this.props.match.params;
     const selectedGame = games.find(game => game.id === parseInt(id));
+    
     return selectedGame === undefined ? (
 		<img src={Loading} alt="loading" className="loading"/> 
     ) : (
