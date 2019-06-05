@@ -18,7 +18,7 @@ class Home extends React.Component {
       slidesToScroll: 1
     };
     const initialGame = this.props.games.find(game => parseInt(game.id) === 21);
-    return initialGame === undefined ? <p>Loading...</p> :(
+    return initialGame === undefined ? <img src={Loading} alt="loading" className="loading"/> :(
       <React.Fragment>
         <NavigationBar />
         <section className="header__image-section">
