@@ -46,7 +46,7 @@ const NavigationBar = () => {
             </a>
           </li>
           <li>
-            <a className="header__nav-list-link" href="https://easypeasyapp.com/impact/">
+            <a className="header__nav-list-link" target="_blank" rel="noopener noreferrer" href="https://easypeasyapp.com/impact/">
               Awards
             </a>
           </li>
