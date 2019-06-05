@@ -30,17 +30,19 @@ class ShareIdea extends React.Component {
             value={this.props.value}
             className="shareIdea--input"
           />
-          <Button 
-          type="button" 
-          onClick={(e) => this.props.handleButtonClick(e, this.props.match.params.id)} variant="light"
-          style={{
-            backgroundColor:'#7db238',
-            color: 'white',
-            fontFamily:"'Lato', sans-serif",
-            textTransform:'uppercase',
-            fontSize:'12px',
-            border:'1px solid #7db238'
-            }}className="shareIdea--button__share">Add your comment</Button>
+          <Link to={`/game/${id}`} className="shareIdea--button__link">
+            <Button 
+            type="button" 
+            onClick={(e) => this.props.handleButtonClick(e, this.props.match.params.id)} variant="light"
+            style={{
+              backgroundColor:'#7db238',
+              color: 'white',
+              fontFamily:"'Lato', sans-serif",
+              textTransform:'uppercase',
+              fontSize:'12px',
+              border:'1px solid #7db238'
+              }}className="shareIdea--button__share">Add your comment</Button>
+          </Link>
         </form>
       </div>
     );

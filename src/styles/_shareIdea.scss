@@ -47,7 +47,7 @@
 }
 .shareIdea--subtitle{
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 11px;
 }
 .shareIdea--input{
     border-radius: 5px;
@@ -55,10 +55,14 @@
     max-width: 600px;
     margin-bottom: 30px;
     width: 300px;
+    border: 1px solid $background-color__lego-game;
 }
 
 .shareIdea--button__share{
     width: 80%;
     height: 40px;
     text-transform: capitalize;
+}
+.shareIdea--button__share{
+    width: 100%;
 }
