@@ -75,9 +75,14 @@ class App extends React.Component {
 
 	updateGamesWithNewGame(gameID){
 		const updatedGame = this.insertCommentInGame(gameID);
+<<<<<<< HEAD
 		
 		const gameIndex = this.state.games.findIndex(game => parseInt(game.id) === parseInt(gameID));
+=======
+>>>>>>> c38030c902f1f491dc3c3b05836d4a3047a7c0a5
 		
+		const gameIndex = this.state.games.findIndex(game => parseInt(game.id) === parseInt(gameID));
+	
 		const newGames = [...this.state.games];
 		newGames[gameIndex] = updatedGame;
 	
