@@ -11,7 +11,7 @@ class CarouselLevel2 extends React.Component{
     return(
       <div className="carousel-card__level">
         <h2 className="carousel-card__level--title">Level 2</h2>
-        <p>{ReactHtmlParser(level_2)}</p>
+          <div>{ReactHtmlParser(level_2)}</div>
         <img className="carousel-card__level--image" src={level2} alt="level 2"/>
       </div>
     )

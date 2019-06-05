@@ -5,6 +5,7 @@
   width:100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
+  font-family:$font__general;
 
   &--main {
     position:fixed;
@@ -32,7 +33,6 @@
   }
   &--message{
     color: $green__primary-color;
-    font-family:$font__general;
     text-transform: capitalize;
     text-align: center;
     line-height: $font__title-line-height;
@@ -46,6 +46,7 @@
     border: 1px solid $green__primary-color;
     background-color: $green__primary-color;
     color:$text-color__ligth;
+    text-transform: uppercase;
   }
 }
 

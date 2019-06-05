@@ -7,17 +7,17 @@ const NavigationBar = () => {
       <nav>
         <ul className="header__nav-list">
           <li>
-            <a className="header__nav-list-link" href="#">
+            <a className="header__nav-list-link" href="/">
               Games
             </a>
           </li>
           <li>
-            <a className="header__nav-list-link" href="#">
+            <a className="header__nav-list-link" href="/">
               Progress
             </a>
           </li>
           <li>
-            <a className="header__nav-list-link" href="#">
+            <a className="header__nav-list-link" href="https://easypeasyapp.com/impact/">
               Awards
             </a>
           </li>
@@ -25,7 +25,7 @@ const NavigationBar = () => {
             <img
               className="header__nav-settingsImage-elem"
               src={imgSettings}
-              alt="image-settings"
+              alt="settings"
             />
           </li>
         </ul>
