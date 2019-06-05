@@ -5,14 +5,25 @@
 	}
 
 	&--bars__container {
+<<<<<<< HEAD
 		max-width: 600px;
+=======
+		margin-right: 10px;
+>>>>>>> 73af010fd974fd6727ea92cc67fb294e231c5f33
 	}
 
 	&--bar {
 		height: 7px;
 		border-radius: 50px;
+<<<<<<< HEAD
 		width: 70vw;
 		max-width: 560px;
+=======
+		min-width: 60vw;
+		@media screen and (min-width: 1024px) {
+			min-width: 50vw;
+		}
+>>>>>>> 73af010fd974fd6727ea92cc67fb294e231c5f33
 	}
 
 	&--subtitle__container {
