@@ -7,7 +7,7 @@
 
 Easy-Peasy Feedback Feature.
 
-This prrject is developed as a part of Adalab educational programme in cooperation with Easy Peasy. The objective was to add a functionality for users to share comments about the different games available in the EasyPeasy app with other parents and also give the developers an opinion about the game using a escale of 4 values.
+This project is developed as a part of Adalab educational programme in cooperation with Easy Peasy. The objective was to add a functionality for users to share comments about the different games available in the EasyPeasy app with other parents and also give the developers an opinion about the game using a escale of 4 values.
 This feature was developed within 4 days by a group of 4 junior front-end developers, as a last project in cooperation with a real company.
 
 Installing / Getting started
