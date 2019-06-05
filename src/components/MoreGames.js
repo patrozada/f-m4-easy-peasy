@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 class MoreGames extends React.Component{
   render(){
     const randomGame = this.props.games[Math.floor(Math.random()*this.props.games.length)];
-    console.log(randomGame)
     return(
       <Link to={`/game/${randomGame.id}`}>
         <div className={`next-game__container ${this.props.bgc}`}>
