@@ -8,7 +8,6 @@ import { ENDPOINT } from "./services/fetchPostComments";
 import ShareIdea from "./components/ShareIdea";
 import Game from './components/Game';
 import Home from './components/Home';
-
 import './App.scss';
 
 class App extends React.Component {
