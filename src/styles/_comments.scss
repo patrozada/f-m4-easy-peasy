@@ -1,22 +1,30 @@
 .comments {
-  &__container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    font-family: $font__general;
-    color: $font__general-color;
-    font-size: $font__title-size;
-    line-height: $font__title-line-height;
-    background-color: $background-color;
-    padding: 15px 0;
-    text-align: center;
-  }
+	&__container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: center;
+		font-family: $font__general;
+		color: $font__general-color;
+		font-size: $font__title-size;
+		line-height: $font__title-line-height;
+		text-align: center;
+		background-color: $background-color__comments;
+		padding: 0px 30px 15px 30px;
+	}
 
-  &__unit {
-    display: block;
-    margin: 6px 0;
-  }
+	&__title {
+		margin-bottom: 10px;
+		font-family: $font__general;
+		text-align: center;
+		font-size: $font__section-title-size;
+		font-weight: bold;
+	}
+
+	&__unit {
+		display: block;
+		margin: 6px 0;
+	}
 }

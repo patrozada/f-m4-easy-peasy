@@ -1,16 +1,18 @@
 .progress {
 	&--section {
 		display: flex;
-		margin-left: 15px;
+		max-width: 560px;
 	}
 
 	&--bars__container {
-		width: 263px;
+		max-width: 600px;
 	}
 
 	&--bar {
 		height: 7px;
 		border-radius: 50px;
+		width: 70vw;
+		max-width: 560px;
 	}
 
 	&--subtitle__container {
@@ -55,8 +57,10 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background-color: white;
 }
 
-.bg-success {
+.progress-bar {
 	border-radius: 50px;
+	background-color: $green__bar-color;
 }

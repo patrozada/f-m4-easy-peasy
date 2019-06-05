@@ -1,14 +1,17 @@
 import React from "react";
 import Slider from "react-slick";
-
 import NavigationBar from "./NavigationBar";
 import logo from "./../images/201-logo.svg";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import Loading from "../images/Eclipse-1.5s-170px.gif"
+import Loading from "../images/Eclipse-1.5s-170px.gif";
 
 class Home extends React.Component {
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   render() {
     var settings = {
       dots: true,
@@ -42,15 +45,17 @@ class Home extends React.Component {
             <Card.Body>
               <Card.Title>{initialGame.name}</Card.Title>
               <Card.Text>{initialGame.description}</Card.Text>
-              <Button
-                style={{
-                  backgroundColor: "#ffffff",
-                  color: "#EB4C54",
-                  border: "1px solid #EB4C54"
-                }}
-              >
-                Play new game
-              </Button>
+              <Link to="game/21">
+                <Button
+                  style={{
+                    backgroundColor: "#ffffff",
+                    color: "#EB4C54",
+                    border: "1px solid #EB4C54"
+                  }}
+                >
+                  Play new game
+                </Button>
+              </Link>
             </Card.Body>
           </Card>
         </div>
@@ -77,7 +82,7 @@ class Home extends React.Component {
         </div>
       </React.Fragment>
     );
-  }
+	}
 }
 
 export default Home;

@@ -21,7 +21,6 @@ class ProgressComponent extends React.Component {
 
 					<ProgressBar
 						className="progress--bar"
-						variant="success"
 						now={this.props.functionProgress}
 					/>
 				</div>
@@ -34,7 +33,7 @@ ProgressComponent.propTypes = {
 	icon: PropTypes.string,
 	iconName: PropTypes.string,
 	functionProgress: PropTypes.number,
-	aptidude: PropTypes.string,
-  };
+	aptidude: PropTypes.string
+};
 
 export default ProgressComponent;
