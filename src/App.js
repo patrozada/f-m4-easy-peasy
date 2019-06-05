@@ -1,5 +1,7 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import ReactDOM from 'react-dom';  
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { fetchGetComments } from './services/fetchGetComments';
 import { ENDPOINT } from "./services/fetchPostComments";
 
@@ -88,6 +90,7 @@ class App extends React.Component {
 		const { value, games } = this.state;
 		return (
 			<div className="general-container">
+				<BrowserRouter>
 				<Switch>
 					<Route exact path="/" render={routerProps => (
 						<Home games={games} />
@@ -114,6 +117,7 @@ class App extends React.Component {
 						/>
 					)}/>
 				</Switch>
+				</BrowserRouter>	
 			</div>
 		);
 	}

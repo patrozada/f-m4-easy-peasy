@@ -56,20 +56,23 @@ class Home extends React.Component {
         </div>
         <div>
           <Slider {...settings}>
-            {this.props.games.map(game => (
-              <div className="carousel-card__wrapper">
-                <Card>
-                  <Card.Img variant="top" src={game.image_url} />
-                  <Card.Body>
-                    <Card.Title>{game.name}</Card.Title>
-                    <Card.Text>{game.description}</Card.Text>
-                    <Link to={`/game/${game.id}`}>
-                      <Button>Go to {game.name}</Button>
-                    </Link>
-                  </Card.Body>
-                </Card>
-              </div>
-            ))}
+              {this.props.games.map((game, index) => 
+                <div key={index} className="carousel-card__landing-wrapper">
+                  <Card className="carousel-card__landing" style={{
+                    fontFamily: "'Lato', sans-serif",
+                    fontSize: '12px'
+                  }}>
+                    <Card.Img variant="top" src={game.image_url} />
+                    <Card.Body>
+                      <Card.Title>{game.name}</Card.Title>
+                      <Card.Text>
+                        {game.description}
+                      </Card.Text>
+                      <Link to={`/game/${game.id}`}><Button >Go to {game.name}</Button></Link>
+                    </Card.Body>
+                  </Card>
+                </div>
+              )}
           </Slider>
         </div>
       </React.Fragment>
