@@ -3,6 +3,7 @@
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: $green__primary-color;
     height: 60px;
     position: fixed;
@@ -15,16 +16,13 @@
     font-family: $font__general;
     font-size: $font__general-size;
     margin:0;
-    padding-top: 5px;
-    padding-left: 30px;
+    padding: 5px 15px 0 0;
     height: 100%;
-    width:25%;
+    width:50px;
   }
   &--input__container{
-    width:75%;
     display: flex;
     align-items: center;
-    padding-right: 30px;
     label{
       margin: 0;
     }

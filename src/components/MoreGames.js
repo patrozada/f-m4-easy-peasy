@@ -1,10 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 class MoreGames extends React.Component{
   render(){
     const randomGame = this.props.games[Math.floor(Math.random()*this.props.games.length)];
-    console.log(randomGame)
     return(
       <Link to={`/game/${randomGame.id}`}>
         <div className={`next-game__container ${this.props.bgc}`}>
@@ -20,5 +20,10 @@ class MoreGames extends React.Component{
     )
   }
 }
+
+MoreGames.propTypes = {
+  games: PropTypes.arrayOf(PropTypes.object),
+  bgc: PropTypes.string,
+};
 
 export default MoreGames;
