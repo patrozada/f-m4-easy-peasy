@@ -6,6 +6,7 @@ import logo from './../images/201-logo.svg';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
+import Loading from "../images/Eclipse-1.5s-170px.gif"
 
 class Home extends React.Component {
   render() {
