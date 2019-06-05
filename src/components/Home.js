@@ -39,19 +39,21 @@ class Home extends React.Component {
               <Card.Text>
                 {initialGame.description}
               </Card.Text>
-              <Button style={{
+              <Link to={`/game/${21}`}>
+                <Button style={{
                   backgroundColor: '#ffffff',
                   color: '#EB4C54',
                   border: '1px solid #EB4C54'
                 }}>Play new game</Button>
+              </Link>
             </Card.Body>
           </Card>
         </div>
-        <div>
+        <div className="carousel__landing-section">
           <Slider {...settings}>
               {this.props.games.map(game => 
-                <div className="carousel-card__wrapper">
-                  <Card>
+                <div className="carousel-card__landing-wrapper">
+                  <Card className="carousel-card__landing">
                     <Card.Img variant="top" src={game.image_url} />
                     <Card.Body>
                       <Card.Title>{game.name}</Card.Title>

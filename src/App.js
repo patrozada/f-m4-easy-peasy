@@ -24,9 +24,14 @@ class App extends React.Component {
 	}
 
 	componentDidMount() {
+
 		fetchGetComments().then(data => {
-			this.setState({ games: data.games });
+			const initialGame = data.games.filter(game => game.id === 21);
+			const randomGames = data.games.splice(0, 6);
+			const finalGames = randomGames.concat(initialGame);
+			this.setState({ games: finalGames });
 		});
+
 	}
 	
 	handleTextArea(event) {
@@ -72,7 +77,7 @@ class App extends React.Component {
 		const updatedGame = this.insertCommentInGame(gameID);
 		
 		const gameIndex = this.state.games.findIndex(game => parseInt(game.id) === parseInt(gameID));
-		
+	
 		const newGames = [...this.state.games];
 		newGames[gameIndex] = updatedGame;
 	
