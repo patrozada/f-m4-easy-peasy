@@ -1,5 +1,6 @@
 import React from 'react';
 import imgSettings from '../images/settings-default.png';
+import { Link } from 'react-router-dom';
 
 const NavigationBar = () => {
 	return (
@@ -7,9 +8,9 @@ const NavigationBar = () => {
 			<nav>
 				<ul className="header__nav-list">
 					<li>
-						<a className="header__nav-list-link" href="/">
+						<Link to="/"className="header__nav-list-link" href="/">
 							Games
-						</a>
+						</Link>
 					</li>
 					<li>
 						<a className="header__nav-list-link" href="/">

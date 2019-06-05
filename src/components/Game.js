@@ -57,17 +57,16 @@ class Game extends React.Component {
           <MoreGames games={games} bgc="ordinary-game" />
 		  <div className="button__all-games--wrapper">
           <Link to="/">
-			<Button
-			variant="outline-light"
-			className="button__all-games" 
+            <Button
+            variant="outline-light"
+            className="button__all-games" 
             style={{
                 color: "#628a2c",
                 border: "1px solid #628a2c",
                 fontFamily: "'Lato', sans-serif",
                 fontSize: "12px",
-				textTransform: "uppercase",
-			  }}
-			  
+                textTransform: "uppercase",
+              }}
             >All games</Button>
           </Link>
 		  </div>
