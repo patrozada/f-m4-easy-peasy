@@ -1,5 +1,6 @@
 import React from 'react';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import PropTypes from 'prop-types';
 
 class ProgressComponent extends React.Component {
 	render() {
@@ -28,5 +29,12 @@ class ProgressComponent extends React.Component {
 		);
 	}
 }
+
+ProgressComponent.propTypes = {
+	icon: PropTypes.string,
+	iconName: PropTypes.string,
+	functionProgress: PropTypes.number,
+	aptidude: PropTypes.string,
+  };
 
 export default ProgressComponent;

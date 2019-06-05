@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 class MoreGames extends React.Component{
@@ -19,5 +20,10 @@ class MoreGames extends React.Component{
     )
   }
 }
+
+MoreGames.propTypes = {
+  games: PropTypes.arrayOf(PropTypes.object),
+  bgc: PropTypes.string,
+};
 
 export default MoreGames;

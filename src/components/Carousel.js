@@ -4,6 +4,7 @@ import CarouselInstructions from './CarouselInstructions';
 import CarouselLevel1 from './CarouselLevel1';
 import CarouselLevel2 from './CarouselLevel2';
 import Card from 'react-bootstrap/Card';
+import PropTypes from 'prop-types';
 
 class Carousel extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class Carousel extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1
     };
+    
     return (
       <Slider {...settings}>
         <div>
@@ -41,4 +43,9 @@ class Carousel extends React.Component {
     );
   }
 }
+
+Carousel.propTypes = {
+  game: PropTypes.object,
+};
+
 export default Carousel;
